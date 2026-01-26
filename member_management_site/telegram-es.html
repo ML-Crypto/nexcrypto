@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEX - Sistema de Gestión de Miembros Telegram</title>
+    <meta name="description" content="Sistema profesional de gestión de miembros Telegram con verificación automatizada de exchanges, gestión de niveles y control de permisos de grupo para tu comunidad Telegram.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body id="top">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="home-es.html" class="logo">
+                <span class="logo-text">NEX</span>
+            </a>
+            <div class="nav-links">
+                <div class="products-dropdown">
+                    <button class="products-btn">Productos <i class="bi bi-chevron-down"></i></button>
+                    <div class="products-menu">
+                        <a href="discord-es.html" class="product-item">
+                            <i class="bi bi-discord"></i>
+                            <div>
+                                <strong>Sistema de Gestión Discord</strong>
+                                <span>Verificación automática, gestión de niveles, seguimiento de referidos</span>
+                            </div>
+                        </a>
+                        <a href="telegram-es.html" class="product-item active">
+                            <i class="bi bi-telegram"></i>
+                            <div>
+                                <strong>Sistema de Gestión Telegram</strong>
+                                <span>Verificación de grupo, control de permisos, gestión automática</span>
+                            </div>
+                        </a>
+                        <a href="line-es.html" class="product-item">
+                            <i class="bi bi-line"></i>
+                            <div>
+                                <strong>Sistema de Gestión LINE</strong>
+                                <span>Revisión de comunidad, verificación de miembros, gestión automática</span>
+                            </div>
+                        </a>
+                        <a href="custom-es.html" class="product-item">
+                            <i class="bi bi-puzzle"></i>
+                            <div>
+                                <strong>Solución Totalmente Personalizada</strong>
+                                <span>Integración multiplataforma, a medida</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="#features">Características</a>
+                <a href="#screenshots">Vista Previa</a>
+                <a href="#pricing">Precios</a>
+                <a href="#faq">FAQ</a>
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar modo oscuro/claro">
+                    <i class="bi bi-sun-fill" id="themeIcon"></i>
+                </button>
+                <div class="lang-dropdown">
+                    <button class="lang-btn"><i class="bi bi-globe"></i> ES</button>
+                    <div class="lang-menu">
+                        <a href="telegram.html">繁體中文</a>
+                        <a href="telegram-zh-cn.html">简体中文</a>
+                        <a href="telegram-en.html">English</a>
+                        <a href="telegram-es.html" class="active">Español</a>
+                    </div>
+                </div>
+                <a href="contact-es.html">Contacto</a>
+            </div>
+            <div class="mobile-nav-group">
+                <!-- Mobile Theme Toggle -->
+                <button class="mobile-theme-toggle" onclick="toggleTheme()" title="Cambiar modo oscuro/claro">
+                    <i class="bi bi-sun-fill" id="mobileThemeIcon"></i>
+                </button>
+                <div class="mobile-lang-dropdown">
+                    <button class="mobile-lang-btn" onclick="toggleMobileLang()">
+                        <i class="bi bi-globe"></i>
+                    </button>
+                    <div class="mobile-lang-menu" id="mobileLangMenu">
+                        <a href="telegram.html">繁體中文</a>
+                        <a href="telegram-zh-cn.html">简体中文</a>
+                        <a href="telegram-en.html">English</a>
+                        <a href="telegram-es.html" class="active">Español</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-products-section">
+            <span class="mobile-section-title">Productos</span>
+            <a href="discord-es.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-discord"></i> Sistema de Gestión Discord
+            </a>
+            <a href="telegram-es.html" class="mobile-product-item active" onclick="toggleMobileMenu()">
+                <i class="bi bi-telegram"></i> Sistema de Gestión Telegram
+            </a>
+            <a href="line-es.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-line"></i> Sistema de Gestión LINE
+            </a>
+            <a href="custom-es.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-puzzle"></i> Solución Totalmente Personalizada
+            </a>
+        </div>
+        <a href="#features" onclick="toggleMobileMenu()">Características</a>
+        <a href="#screenshots" onclick="toggleMobileMenu()">Vista Previa</a>
+        <a href="#pricing" onclick="toggleMobileMenu()">Precios</a>
+        <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+        <a href="contact-es.html" onclick="toggleMobileMenu()">Contacto</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-split">
+                <div class="hero-left">
+                    <p class="hero-tag">Diseñado para Afiliados de Exchanges y Comunidades Crypto</p>
+                    <h1>Gestión de Grupos Telegram<br><span class="gradient-text">Solución Automatizada</span></h1>
+                    <div class="hero-features">
+                        <p class="hero-feature-item">Verificación automática de vinculación de exchange</p>
+                        <p class="hero-feature-item">Asignación de niveles VIP por volumen de trading</p>
+                        <p class="hero-feature-item">Gestión automática de permisos de grupo</p>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            <i class="bi bi-telegram"></i> Contáctanos
+                        </a>
+                        <a href="#features" class="btn btn-outline btn-lg">
+                            Saber Más
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <img src="images/Telegram/TG_MAIN.jpg" alt="Vista General del Sistema" class="hero-screenshot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="platforms">
+        <div class="container">
+            <div class="platforms-row">
+                <p class="platforms-label">Plataforma</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <i class="bi bi-telegram"></i>
+                        <span>Telegram</span>
+                    </div>
+                </div>
+            </div>
+            <div class="platforms-divider"></div>
+            <div class="platforms-row">
+                <p class="platforms-label">Exchanges Compatibles</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <span class="platform-text-logo okx">OKX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bybit">BYB<span class="bybit-i">I</span>T</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bingx">BingX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="audience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Diseñado Para Ti</h2>
+                <p>Sin importar qué tipo de comunidad crypto administres, NEX puede ayudarte</p>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+                    <h3>Afiliados de Exchanges</h3>
+                    <p>Seguimiento automático del volumen de trading de referidos, gestión fácil de comisiones y beneficios VIP</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-person-video3"></i>
+                    </div>
+                    <h3>KOLs de Crypto</h3>
+                    <p>Ofrece beneficios exclusivos a tus seguidores, rastrea el rendimiento de promociones y recompensas</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+                    <h3>Educadores de Trading</h3>
+                    <p>Clasifica estudiantes por rendimiento de trading, proporciona cursos y recursos correspondientes</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-broadcast"></i>
+                    </div>
+                    <h3>Grupos de Señales</h3>
+                    <p>Verifica la elegibilidad de suscriptores, asegura que solo usuarios calificados reciban señales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Características Poderosas</h2>
+                <p>Desde verificación de miembros hasta gestión de grupos, desde verificación de trading hasta seguimiento de recompensas - todo automatizado</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-telegram"></i>
+                    </div>
+                    <h3>Integración con Bot de Telegram</h3>
+                    <p>Interacción por comandos, control automático de permisos, gestión de grupos VIP - integración perfecta con tus grupos de Telegram.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h3>Verificación API de Exchange</h3>
+                    <p>Soporta OKX, Bybit, BingX y otros exchanges principales. Verifica automáticamente volumen de trading, depósitos y nivel KYC.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
+                    <h3>Sistema de Niveles VIP</h3>
+                    <p>Sistema VIP multinivel personalizable con ascensos/descensos automáticos basados en rendimiento de trading.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-shield-lock"></i>
+                    </div>
+                    <h3>Gestión de Permisos de Grupo</h3>
+                    <p>Gestiona automáticamente permisos de entrada al grupo. Usuarios VIP aprobados automáticamente, no-VIP rechazados automáticamente.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h3>Sistema de Recompensas por Referidos</h3>
+                    <p>Códigos de invitación únicos, seguimiento de referidos, estadísticas de recompensas - incentiva a los miembros a promover tu comunidad.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-gear"></i>
+                    </div>
+                    <h3>Panel de Administración Web</h3>
+                    <p>Interfaz web intuitiva para ver datos de miembros en tiempo real, ajustar configuraciones y monitorear el estado del sistema.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <h3>Sistema de Notificaciones Automáticas</h3>
+                    <p>Recordatorios de expiración VIP, notificaciones de cambio de nivel, alertas de cumplimiento - los miembros nunca pierden actualizaciones importantes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cómo Funciona</h2>
+                <p>Proceso de verificación automatizado en 4 simples pasos</p>
+            </div>
+            <div class="steps-container">
+                <div class="steps-row">
+                    <div class="steps-label">
+                        <i class="bi bi-telegram"></i>
+                        <span>Verificación Telegram</span>
+                    </div>
+                    <div class="steps-grid-inline">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <div class="step-icon">
+                                <i class="bi bi-chat-dots"></i>
+                            </div>
+                            <h3>Mensaje al Bot</h3>
+                            <p>Usuario envía mensaje al Bot y hace clic en "Iniciar Verificación"</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <div class="step-icon">
+                                <i class="bi bi-link-45deg"></i>
+                            </div>
+                            <h3>Vincular Exchange</h3>
+                            <p>Seleccionar exchange (OKX/Bybit/BingX), ingresar UID</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <div class="step-icon">
+                                <i class="bi bi-cpu"></i>
+                            </div>
+                            <h3>Verificación Auto</h3>
+                            <p>Sistema verifica activos, KYC, volumen de trading vía API</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card highlight-card">
+                            <div class="step-number">4</div>
+                            <div class="step-icon">
+                                <i class="bi bi-check-circle"></i>
+                            </div>
+                            <h3>Obtener VIP</h3>
+                            <p>Usuarios calificados obtienen acceso VIP y elegibilidad de grupo automáticamente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <div class="section-header">
+                <h2>Vista Previa del Sistema</h2>
+                <p>Interfaz de administración moderna para operaciones intuitivas y convenientes</p>
+            </div>
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <img src="images/Telegram/TG_MAIN.jpg" alt="Panel de Control">
+                    <p>Estadísticas de miembros en tiempo real, estado del sistema y métricas clave</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/Telegram/TG_MEMBER.jpg" alt="Gestión de Miembros">
+                    <p>Lista completa de miembros con búsqueda, filtros y perfiles detallados</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/Telegram/TG_REFER.jpg" alt="Análisis de Referidos">
+                    <p>Tabla de líderes de referidos, detalles de línea descendente y seguimiento de promociones</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/Telegram/TG_DATA.jpg" alt="Análisis de Datos">
+                    <p>Distribución de volumen de trading, estadísticas de activos y visualización de datos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security">
+        <div class="container">
+            <div class="section-header">
+                <h2>Seguridad Primero</h2>
+                <p>La seguridad de tus datos es nuestra máxima prioridad</p>
+            </div>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <h3>Acceso Solo Lectura</h3>
+                    <p>La API solo requiere permisos de lectura. No puede realizar trades ni retiros, asegurando que tus activos permanezcan seguros.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-hdd"></i>
+                    </div>
+                    <h3>Almacenamiento Local</h3>
+                    <p>Todos los datos almacenados en tu propio dispositivo. Sin servidores de terceros - mantienes control completo.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>Sin Acceso a Activos</h3>
+                    <p>El sistema solo verifica elegibilidad de usuarios. Sin operaciones de fondos - los activos siempre permanecen seguros en el exchange.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Planes de Precios</h2>
+                <p>Elige el plan que se adapte a tus necesidades</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Recomendado</div>
+                    <div class="pricing-header">
+                        <h3>Profesional</h3>
+                        <p>Funciones completas, listo para usar</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-contact">Contáctanos</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Bot de Telegram</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Exchanges: OKX, Bybit, BingX</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Sistema de Niveles VIP</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Gestión de Permisos de Grupo</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Sistema de Recompensas por Referidos</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Panel de Administración Web</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Soporte Técnico</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-block">Contáctanos</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Personalizado</h3>
+                        <p>Adaptado a tus necesidades</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-contact">Contáctanos</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Todas las funciones Profesional</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Desarrollo personalizado</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Licencia multi-grupo</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Acceso API</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Soporte dedicado</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-block">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Preguntas comunes sobre el Sistema de Gestión Telegram de NEX</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Qué exchanges son compatibles?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Actualmente soporta OKX, Bybit y BingX. El sistema verifica automáticamente volumen de trading, cantidad de depósitos y nivel KYC vía APIs de exchanges. Para otros exchanges, contáctanos para discutir soluciones personalizadas.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Necesito conocimientos técnicos para usar esto?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El sistema está diseñado para facilidad de uso con una interfaz web intuitiva. Las operaciones básicas no requieren conocimientos de programación - solo un navegador web. También proporcionamos instalación completa y soporte técnico.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Cómo se despliega el sistema?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El sistema puede desplegarse en tu propia computadora Windows o servidor. Proporcionamos guía de instalación completa y soporte técnico para asegurar una configuración sin problemas.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Está incluido el soporte técnico?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, todos los planes incluyen soporte técnico. Proporcionamos soporte en tiempo real vía Telegram para ayudar a resolver cualquier problema que encuentres.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Puedo probar antes de comprar?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Contáctanos para organizar una demostración del producto para que puedas entender las funciones completas y operación antes de decidir comprar.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Qué pasa cuando expira el VIP?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El sistema rastrea automáticamente la expiración VIP. Se envían recordatorios antes de la expiración, y los permisos VIP se eliminan automáticamente después. Los usuarios pueden re-verificar en cualquier momento para restaurar el estado VIP.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Cómo funciona el sistema de referidos?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Cada miembro tiene un código de invitación único. Cuando nuevos usuarios se registran usando el código y vinculan exitosamente su exchange, el sistema registra automáticamente la relación de referido. El panel muestra conteo de invitados, lista de línea descendente y tabla de líderes de referidos.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Los usuarios necesitan proporcionar claves API?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. Los usuarios solo necesitan proporcionar su UID de exchange (ID de Usuario). El sistema usa la API pública del exchange para verificar elegibilidad VIP - no se requieren claves API sensibles de los usuarios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>¿Listo para Comenzar?</h2>
+                <p>Contáctanos ahora para más información del producto y precios</p>
+                <a href="contact-es.html" class="btn btn-primary btn-lg">
+                    <i class="bi bi-chat-dots"></i> Contáctanos
+                </a>
+                <p class="contact-note">
+                    <i class="bi bi-clock"></i> Usualmente respondemos en 24 horas
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">NEX</span>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2026 NEX. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="" id="lightbox-img">
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop">
+        <i class="bi bi-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <!-- Theme Toggle Script -->
+    <script>
+        function initTheme() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.remove('light-mode');
+                updateThemeIcons(false);
+            } else {
+                document.body.classList.add('light-mode');
+                updateThemeIcons(true);
+            }
+        }
+        function toggleTheme() {
+            const isLight = document.body.classList.toggle('light-mode');
+            localStorage.setItem('nex_theme', isLight ? 'light' : 'dark');
+            updateThemeIcons(isLight);
+        }
+        function updateThemeIcons(isLight) {
+            const icon = isLight ? 'bi-moon-fill' : 'bi-sun-fill';
+            const desktopIcon = document.getElementById('themeIcon');
+            const mobileIcon = document.getElementById('mobileThemeIcon');
+            if (desktopIcon) desktopIcon.className = 'bi ' + icon;
+            if (mobileIcon) mobileIcon.className = 'bi ' + icon;
+        }
+        document.addEventListener('DOMContentLoaded', initTheme);
+        (function() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme !== 'dark') document.body.classList.add('light-mode');
+        })();
+    </script>
+</body>
+</html>

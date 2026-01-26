@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Deep - AI 驅動的加密貨幣深度分析平台</title>
+    <meta name="description" content="Crypto Deep 提供 AI 技術分析、資金費率監控、鯨魚動向追蹤、價格警報等專業加密貨幣分析工具，透過 Discord/Telegram 即時推送，助您掌握市場先機。">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="bi bi-graph-up-arrow"></i></span>
+                <span class="logo-text">Crypto<span class="logo-highlight">Deep</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">功能特色</a>
+                <a href="#how-it-works">運作方式</a>
+                <a href="#pricing">方案價格</a>
+                <a href="#faq">常見問題</a>
+                <a href="../index.html" class="nav-back"><i class="bi bi-arrow-left"></i> 返回 NEX</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#features" onclick="toggleMobileMenu()">功能特色</a>
+        <a href="#how-it-works" onclick="toggleMobileMenu()">運作方式</a>
+        <a href="#pricing" onclick="toggleMobileMenu()">方案價格</a>
+        <a href="#faq" onclick="toggleMobileMenu()">常見問題</a>
+        <a href="../index.html" onclick="toggleMobileMenu()"><i class="bi bi-arrow-left"></i> 返回 NEX</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="bi bi-robot"></i> AI 驅動分析
+                </div>
+                <h1>深度市場分析<br><span class="gradient-text">即時掌握先機</span></h1>
+                <p class="hero-subtitle">
+                    結合 AI 圖形識別、資金費率監控、鯨魚動向追蹤等多維度分析<br>
+                    透過 Discord / Telegram 即時推送，讓您不錯過任何交易機會
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">分析模組</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">全天候監控</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">支援交易所</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#features" class="btn btn-primary btn-lg">
+                        <i class="bi bi-lightning-charge"></i> 探索功能
+                    </a>
+                    <a href="#pricing" class="btn btn-outline btn-lg">
+                        查看方案
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Platforms -->
+    <section class="platforms">
+        <div class="container">
+            <div class="platforms-row">
+                <p class="platforms-label">通知平台</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <i class="bi bi-discord"></i>
+                        <span>Discord</span>
+                    </div>
+                    <div class="platform-item">
+                        <i class="bi bi-telegram"></i>
+                        <span>Telegram</span>
+                    </div>
+                </div>
+            </div>
+            <div class="platforms-divider"></div>
+            <div class="platforms-row">
+                <p class="platforms-label">支援交易所</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <span class="platform-text-logo binance">Binance</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo okx">OKX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bybit">Bybit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>六大核心功能</h2>
+                <p>全方位市場監控，多維度數據分析</p>
+            </div>
+            <div class="features-grid">
+                <!-- AI Technical Analysis -->
+                <div class="feature-card featured">
+                    <div class="feature-badge">AI 驅動</div>
+                    <div class="feature-icon ai">
+                        <i class="bi bi-cpu"></i>
+                    </div>
+                    <h3>AI 圖形分析</h3>
+                    <p>採用 YOLO 深度學習模型，自動識別 K 線圖形態，包括頭肩頂、W底、M頂等經典型態，並偵測買賣信號。</p>
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check2"></i> 頭肩頂/底型態識別</li>
+                        <li><i class="bi bi-check2"></i> 雙頂/雙底偵測</li>
+                        <li><i class="bi bi-check2"></i> 買賣信號自動標記</li>
+                        <li><i class="bi bi-check2"></i> 30分鐘週期分析</li>
+                    </ul>
+                </div>
+
+                <!-- Funding Rate Monitor -->
+                <div class="feature-card">
+                    <div class="feature-icon funding">
+                        <i class="bi bi-percent"></i>
+                    </div>
+                    <h3>資金費率監控</h3>
+                    <p>即時追蹤永續合約資金費率，當費率出現異常時自動警報，協助您發現套利機會或市場情緒轉變。</p>
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check2"></i> 異常費率即時警報</li>
+                        <li><i class="bi bi-check2"></i> 多交易所費率比較</li>
+                        <li><i class="bi bi-check2"></i> 歷史費率追蹤</li>
+                        <li><i class="bi bi-check2"></i> 套利機會提示</li>
+                    </ul>
+                </div>
+
+                <!-- Whale Tracker -->
+                <div class="feature-card">
+                    <div class="feature-icon whale">
+                        <i class="bi bi-water"></i>
+                    </div>
+                    <h3>鯨魚動向追蹤</h3>
+                    <p>監控現貨市場大額交易，追蹤鯨魚買賣動向，讓您跟隨「聰明錢」的腳步，掌握市場主力動態。</p>
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check2"></i> 大額買賣即時通知</li>
+                        <li><i class="bi bi-check2"></i> 30分鐘交易報告</li>
+                        <li><i class="bi bi-check2"></i> 即時看板更新</li>
+                        <li><i class="bi bi-check2"></i> 多交易所整合</li>
+                    </ul>
+                </div>
+
+                <!-- Price Alert -->
+                <div class="feature-card">
+                    <div class="feature-icon price">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <h3>價格警報系統</h3>
+                    <p>偵測快速漲跌行情，當價格出現異常波動時即時通知，搭配自動生成的圖表，讓您快速掌握行情。</p>
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check2"></i> 快速漲跌偵測</li>
+                        <li><i class="bi bi-check2"></i> 自動圖表生成</li>
+                        <li><i class="bi bi-check2"></i> 市值資訊整合</li>
+                        <li><i class="bi bi-check2"></i> 可自訂閾值</li>
+                    </ul>
+                </div>
+
+                <!-- News Feed -->
+                <div class="feature-card">
+                    <div class="feature-icon news">
+                        <i class="bi bi-newspaper"></i>
+                    </div>
+                    <h3>即時新聞推送</h3>
+                    <p>自動抓取 BlockBeats 等主流加密貨幣新聞源，即時推送重要消息，讓您第一時間掌握市場動態。</p>
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check2"></i> 多新聞源整合</li>
+                        <li><i class="bi bi-check2"></i> 智能去重過濾</li>
+                        <li><i class="bi bi-check2"></i> 即時推送通知</li>
+                        <li><i class="bi bi-check2"></i> 新聞分類標籤</li>
+                    </ul>
+                </div>
+
+                <!-- TradingView Integration -->
+                <div class="feature-card">
+                    <div class="feature-icon tv">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <h3>TradingView 整合</h3>
+                    <p>接收 TradingView 技術指標警報，將您的交易策略與通知系統串接，實現自動化交易信號推送。</p>
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check2"></i> Webhook 接收器</li>
+                        <li><i class="bi bi-check2"></i> 自訂策略整合</li>
+                        <li><i class="bi bi-check2"></i> 多指標支援</li>
+                        <li><i class="bi bi-check2"></i> 警報歷史記錄</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>運作方式</h2>
+                <p>簡單三步驟，開始接收專業分析</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="bi bi-gear"></i>
+                    </div>
+                    <h3>選擇方案</h3>
+                    <p>根據您的需求選擇合適的功能模組組合，我們提供靈活的方案選擇</p>
+                </div>
+                <div class="step-connector">
+                    <i class="bi bi-arrow-right"></i>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="bi bi-link-45deg"></i>
+                    </div>
+                    <h3>串接平台</h3>
+                    <p>將分析系統連接到您的 Discord 伺服器或 Telegram 群組</p>
+                </div>
+                <div class="step-connector">
+                    <i class="bi bi-arrow-right"></i>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <h3>接收分析</h3>
+                    <p>系統 24/7 自動運作，當有重要信號時即時推送到您的頻道</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>適用對象</h2>
+                <p>無論您是什麼類型的交易者，Crypto Deep 都能助您一臂之力</p>
+            </div>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-icon">
+                        <i class="bi bi-person-workspace"></i>
+                    </div>
+                    <h3>個人交易者</h3>
+                    <p>不需要 24 小時盯盤，讓 AI 幫您監控市場，重要信號即時通知</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h3>交易社群</h3>
+                    <p>為您的 Discord/Telegram 社群提供專業分析內容，提升社群價值</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+                    <h3>交易所代理商</h3>
+                    <p>提供加值服務給您的用戶，增加用戶黏著度與活躍度</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+                    <h3>投資教學</h3>
+                    <p>即時案例分析，讓學員看到實際的市場型態與交易信號</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>方案價格</h2>
+                <p>靈活選擇，按需付費</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Basic Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>基礎版</h3>
+                        <p>入門首選</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-contact">聯繫諮詢</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle-fill"></i> 價格警報系統</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 即時新聞推送</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Discord 整合</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 基礎技術支援</li>
+                        <li class="disabled"><i class="bi bi-x-circle"></i> AI 圖形分析</li>
+                        <li class="disabled"><i class="bi bi-x-circle"></i> 鯨魚動向追蹤</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-block">聯繫諮詢</a>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">推薦</div>
+                    <div class="pricing-header">
+                        <h3>專業版</h3>
+                        <p>完整功能體驗</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-contact">聯繫諮詢</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle-fill"></i> 所有基礎版功能</li>
+                        <li><i class="bi bi-check-circle-fill"></i> AI 圖形分析</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 資金費率監控</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 鯨魚動向追蹤</li>
+                        <li><i class="bi bi-check-circle-fill"></i> TradingView 整合</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 優先技術支援</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-block">聯繫諮詢</a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>企業版</h3>
+                        <p>量身打造</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-contact">聯繫諮詢</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle-fill"></i> 所有專業版功能</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 客製化開發</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 多頻道部署</li>
+                        <li><i class="bi bi-check-circle-fill"></i> API 存取</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 專屬客戶經理</li>
+                        <li><i class="bi bi-check-circle-fill"></i> SLA 服務保證</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-block">聯繫諮詢</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>常見問題</h2>
+                <p>關於 Crypto Deep 的常見疑問</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>AI 圖形分析的準確度如何？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>我們的 YOLO 模型經過大量 K 線圖訓練，能夠識別常見的技術型態。但請注意，技術分析僅供參考，不構成投資建議。建議結合其他指標綜合判斷。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>系統多久更新一次分析？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>不同功能有不同的更新頻率：AI 圖形分析每 30 分鐘執行一次、價格警報即時監控、鯨魚追蹤即時推送、新聞每 5 分鐘檢查更新。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>可以只選擇部分功能嗎？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>可以。我們提供靈活的模組化選擇，您可以根據需求選擇需要的功能。聯繫我們討論最適合您的方案組合。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>支援哪些交易所的數據？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>目前支援 Binance、OKX、Bybit 三大交易所的數據。不同功能支援的交易所可能有所不同，詳情請聯繫我們。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>如何接收分析通知？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>分析結果會透過 Discord Bot 或 Telegram Bot 發送到您指定的頻道/群組。您只需要將我們的 Bot 邀請到您的伺服器即可。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>需要提供交易所 API 嗎？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>不需要。我們的系統使用交易所的公開 API 獲取市場數據，不需要您提供任何私人 API 密鑰，完全不會接觸您的帳戶。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>開始使用 Crypto Deep</h2>
+                <p>立即聯繫我們，獲取專屬方案與報價</p>
+                <a href="../member_management_site/contact.html" class="btn btn-primary btn-lg">
+                    <i class="bi bi-chat-dots"></i> 聯繫我們
+                </a>
+                <p class="contact-note">
+                    <i class="bi bi-clock"></i> 通常在 24 小時內回覆
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Crypto<span class="logo-highlight">Deep</span></span>
+                    <p>AI 驅動的加密貨幣深度分析平台</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#features">功能特色</a>
+                    <a href="#pricing">方案價格</a>
+                    <a href="../index.html">返回 NEX</a>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2026 NEX. All rights reserved.
+                </p>
+                <p class="footer-disclaimer">
+                    本平台提供的分析僅供參考，不構成投資建議。加密貨幣交易存在高風險，請謹慎投資。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

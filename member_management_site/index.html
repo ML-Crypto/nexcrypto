@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEX - 社群會員管理解決方案</title>
+    <meta name="description" content="NEX 提供專業的社群會員管理系統，支援 Discord 與 LINE OpenChat，自動化驗證、等級管理、推薦追蹤，為您的加密貨幣社群提供完整解決方案。">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body id="top">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#top" class="logo">
+                <span class="logo-text">NEX</span>
+            </a>
+            <div class="nav-links">
+                <div class="products-dropdown">
+                    <button class="products-btn">產品 <i class="bi bi-chevron-down"></i></button>
+                    <div class="products-menu">
+                        <a href="discord.html" class="product-item">
+                            <i class="bi bi-discord"></i>
+                            <div>
+                                <strong>Discord 管理系統</strong>
+                                <span>自動驗證、等級管理、邀請追蹤</span>
+                            </div>
+                        </a>
+                        <a href="telegram.html" class="product-item">
+                            <i class="bi bi-telegram"></i>
+                            <div>
+                                <strong>Telegram 管理系統</strong>
+                                <span>群組驗證、權限控制、自動管理</span>
+                            </div>
+                        </a>
+                        <a href="line.html" class="product-item">
+                            <i class="bi bi-line"></i>
+                            <div>
+                                <strong>LINE 管理系統</strong>
+                                <span>社群審核、成員驗證、自動管理</span>
+                            </div>
+                        </a>
+                        <a href="custom.html" class="product-item">
+                            <i class="bi bi-puzzle"></i>
+                            <div>
+                                <strong>全客製化方案</strong>
+                                <span>跨平台整合、量身打造</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="#why-nex">為什麼選擇 NEX</a>
+                <a href="#security">安全性</a>
+                <a href="contact.html">聯繫我們</a>
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" onclick="toggleTheme()" title="切換深色/淺色模式">
+                    <i class="bi bi-sun-fill" id="themeIcon"></i>
+                </button>
+                <div class="lang-dropdown">
+                    <button class="lang-btn"><i class="bi bi-globe"></i> 繁體</button>
+                    <div class="lang-menu">
+                        <a href="index.html" class="active">繁體中文</a>
+                        <a href="home-zh-cn.html">简体中文</a>
+                        <a href="home-en.html">English</a>
+                        <a href="home-es.html">Español</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-nav-group">
+                <!-- Mobile Theme Toggle -->
+                <button class="mobile-theme-toggle" onclick="toggleTheme()" title="切換深色/淺色模式">
+                    <i class="bi bi-sun-fill" id="mobileThemeIcon"></i>
+                </button>
+                <div class="mobile-lang-dropdown">
+                    <button class="mobile-lang-btn" onclick="toggleMobileLang()">
+                        <i class="bi bi-globe"></i>
+                    </button>
+                    <div class="mobile-lang-menu" id="mobileLangMenu">
+                        <a href="index.html" class="active">繁體中文</a>
+                        <a href="home-zh-cn.html">简体中文</a>
+                        <a href="home-en.html">English</a>
+                        <a href="home-es.html">Español</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-products-section">
+            <span class="mobile-section-title">產品</span>
+            <a href="discord.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-discord"></i> Discord 管理系統
+            </a>
+            <a href="telegram.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-telegram"></i> Telegram 管理系統
+            </a>
+            <a href="line.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-line"></i> LINE 管理系統
+            </a>
+            <a href="custom.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-puzzle"></i> 全客製化方案
+            </a>
+        </div>
+        <a href="#why-nex" onclick="toggleMobileMenu()">為什麼選擇 NEX</a>
+        <a href="#security" onclick="toggleMobileMenu()">安全性</a>
+        <a href="contact.html" onclick="toggleMobileMenu()">聯繫我們</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero hero-home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-split">
+                <!-- Left: Text Content -->
+                <div class="hero-left">
+                    <p class="hero-tag">專為交易所代理商與加密貨幣社群打造</p>
+                    <h1>社群會員管理<br><span class="gradient-text">自動化解決方案</span></h1>
+                    <p class="hero-subtitle">
+                        <span class="highlight">從會員驗證到等級管理，從推薦追蹤到數據分析</span>
+                        <span class="subtext">NEX 為您的社群提供一站式管理系統</span>
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary btn-lg">
+                            <i class="bi bi-grid"></i> 瀏覽產品
+                        </a>
+                        <a href="#contact" class="btn btn-outline btn-lg">
+                            聯繫諮詢
+                        </a>
+                    </div>
+                </div>
+                <!-- Right: Animated NEX Logo -->
+                <div class="hero-right">
+                    <div class="hero-logo-container">
+                        <div class="hero-logo-glow"></div>
+                        <div class="hero-logo-text">NEX</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scroll Down Indicator -->
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="platforms">
+        <div class="container">
+            <div class="platforms-row">
+                <p class="platforms-label">支援平台</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <i class="bi bi-discord"></i>
+                        <span>Discord</span>
+                    </div>
+                    <div class="platform-item">
+                        <i class="bi bi-telegram"></i>
+                        <span>Telegram</span>
+                    </div>
+                    <div class="platform-item">
+                        <i class="bi bi-line"></i>
+                        <span>LINE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="platforms-divider"></div>
+            <div class="platforms-row">
+                <p class="platforms-label">支援交易所</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <span class="platform-text-logo okx">OKX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bybit">BYB<span class="bybit-i">I</span>T</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bingx">BingX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo binance">Binance</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bitget">Bitget</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section" id="news">
+        <div class="container">
+            <div class="section-header">
+                <h2>最新消息</h2>
+                <p>了解 NEX 的最新動態與更新</p>
+            </div>
+            <div class="news-grid" id="newsGrid">
+                <!-- 動態載入文章 -->
+                <div class="news-loading">
+                    <i class="bi bi-hourglass-split"></i> 載入中...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>我們的產品</h2>
+                <p>選擇適合您社群的管理系統</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon discord">
+                        <i class="bi bi-discord"></i>
+                    </div>
+                    <h3>Discord 管理系統</h3>
+                    <p class="product-desc">專為 Discord 社群打造的完整 VIP 會員管理方案，支援 Telegram 群組整合</p>
+                    <ul class="product-features">
+                        <li><i class="bi bi-check2"></i> Discord Bot 斜線指令互動</li>
+                        <li><i class="bi bi-check2"></i> Telegram 群組整合</li>
+                        <li><i class="bi bi-check2"></i> 交易所 API 自動驗證</li>
+                        <li><i class="bi bi-check2"></i> VIP 等級自動升降</li>
+                        <li><i class="bi bi-check2"></i> 推薦獎勵追蹤系統</li>
+                        <li><i class="bi bi-check2"></i> Web 管理後台</li>
+                    </ul>
+                    <div class="product-exchanges">
+                        <span>支援交易所：</span>
+                        <span class="exchange-tag">OKX</span>
+                        <span class="exchange-tag">Bybit</span>
+                        <span class="exchange-tag">BingX</span>
+                    </div>
+                    <a href="discord.html" class="btn btn-primary btn-block">
+                        了解更多 <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon line">
+                        <i class="bi bi-line"></i>
+                    </div>
+                    <h3>LINE 管理系統</h3>
+                    <p class="product-desc">專為 LINE 社群打造的自動化審核與成員管理方案</p>
+                    <ul class="product-features">
+                        <li><i class="bi bi-check2"></i> LINE OpenChat 整合</li>
+                        <li><i class="bi bi-check2"></i> 自動審核加入申請</li>
+                        <li><i class="bi bi-check2"></i> 交易所 API 自動驗證</li>
+                        <li><i class="bi bi-check2"></i> 加入問題設定</li>
+                        <li><i class="bi bi-check2"></i> 成員合併管理</li>
+                        <li><i class="bi bi-check2"></i> Web 管理後台</li>
+                    </ul>
+                    <div class="product-exchanges">
+                        <span>支援交易所：</span>
+                        <span class="exchange-tag">OKX</span>
+                        <span class="exchange-tag">Bybit</span>
+                        <span class="exchange-tag">BingX</span>
+                        <span class="exchange-tag">Binance</span>
+                        <span class="exchange-tag">Bitget</span>
+                    </div>
+                    <a href="line.html" class="btn btn-primary btn-block">
+                        了解更多 <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon telegram">
+                        <i class="bi bi-telegram"></i>
+                    </div>
+                    <h3>Telegram 管理系統</h3>
+                    <p class="product-desc">專為 Telegram 群組打造的完整會員管理方案，自動化驗證與權限控制</p>
+                    <ul class="product-features">
+                        <li><i class="bi bi-check2"></i> Telegram Bot 指令互動</li>
+                        <li><i class="bi bi-check2"></i> 交易所 API 自動驗證</li>
+                        <li><i class="bi bi-check2"></i> VIP 等級自動升降</li>
+                        <li><i class="bi bi-check2"></i> 群組權限自動管理</li>
+                        <li><i class="bi bi-check2"></i> 推薦獎勵追蹤系統</li>
+                        <li><i class="bi bi-check2"></i> Web 管理後台</li>
+                    </ul>
+                    <div class="product-exchanges">
+                        <span>支援交易所：</span>
+                        <span class="exchange-tag">OKX</span>
+                        <span class="exchange-tag">Bybit</span>
+                        <span class="exchange-tag">BingX</span>
+                    </div>
+                    <a href="telegram.html" class="btn btn-primary btn-block">
+                        了解更多 <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Custom Solution Banner -->
+            <div class="custom-banner">
+                <div class="custom-banner-content">
+                    <i class="bi bi-puzzle"></i>
+                    <div class="custom-banner-text">
+                        <strong>需要跨平台整合或特殊功能？</strong>
+                        <span>我們提供全客製化開發服務，依據您的需求量身打造</span>
+                    </div>
+                    <a href="custom.html" class="btn btn-outline">
+                        了解客製化方案 <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why NEX Section -->
+    <section class="why-nex" id="why-nex">
+        <div class="container">
+            <div class="section-header">
+                <h2>為什麼選擇 NEX</h2>
+                <p>我們專注於為加密貨幣社群提供最佳的會員管理體驗</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-robot"></i>
+                    </div>
+                    <h3>全自動化流程</h3>
+                    <p>從會員註冊、交易所驗證到 VIP 等級調整，全程自動化處理，節省您寶貴的管理時間。</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h3>交易所 API 整合</h3>
+                    <p>支援 OKX、Bybit、BingX 等主流交易所，自動驗證用戶交易量、入金額度與 KYC 狀態。</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-window"></i>
+                    </div>
+                    <h3>直覺化管理介面</h3>
+                    <p>現代化的 Web 管理後台，即時查看會員數據、調整系統設定，操作簡單直覺。</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-headset"></i>
+                    </div>
+                    <h3>專業技術支援</h3>
+                    <p>提供完整的安裝指導與技術支援，透過 Telegram 即時回應您的問題。</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-puzzle"></i>
+                    </div>
+                    <h3>彈性客製化</h3>
+                    <p>可依據您的需求進行功能客製化，打造最適合您社群的管理系統。</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-hdd-stack"></i>
+                    </div>
+                    <h3>本地化部署</h3>
+                    <p>系統部署在您自己的設備上，數據完全由您掌控，不依賴第三方雲端服務。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="audience">
+        <div class="container">
+            <div class="section-header">
+                <h2>專為這些人打造</h2>
+                <p>無論您經營什麼類型的加密貨幣社群，NEX 都能幫助您</p>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+                    <h3>交易所代理商</h3>
+                    <p>自動追蹤下線交易量，輕鬆管理返佣資格與 VIP 權益分配</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-person-video3"></i>
+                    </div>
+                    <h3>加密貨幣 KOL</h3>
+                    <p>為粉絲提供專屬權益，追蹤推廣成效與推薦獎勵</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+                    <h3>投資教學社群</h3>
+                    <p>依據學員交易表現分級，提供對應的課程與資源</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-broadcast"></i>
+                    </div>
+                    <h3>交易訊號群組</h3>
+                    <p>驗證訂閱者資格，確保只有合格用戶能接收訊號</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security" id="security">
+        <div class="container">
+            <div class="section-header">
+                <h2>安全至上</h2>
+                <p>您的數據安全是我們的首要考量</p>
+            </div>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <h3>僅需讀取權限</h3>
+                    <p>交易所 API 只需要讀取權限，無法進行任何交易或提款操作，確保您的資產安全無虞。</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-hdd"></i>
+                    </div>
+                    <h3>數據本地儲存</h3>
+                    <p>所有數據儲存在您自己的設備上，不經過第三方伺服器，完全掌控您的資料。</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>不接觸用戶資產</h3>
+                    <p>系統僅驗證用戶資格，不涉及任何資金操作，用戶資產始終在交易所安全保管。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>準備好開始了嗎？</h2>
+                <p>立即聯繫我們，了解更多產品資訊與價格方案</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    <i class="bi bi-chat-dots"></i> 聯繫我們
+                </a>
+                <p class="contact-note">
+                    <i class="bi bi-clock"></i> 通常在 24 小時內回覆
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">NEX</span>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2026 NEX. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop">
+        <i class="bi bi-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+
+    <!-- News Section Script -->
+    <script>
+        // 載入最新消息
+        async function loadNews() {
+            const newsGrid = document.getElementById('newsGrid');
+            const lang = 'zh-TW'; // 繁體中文版
+
+            try {
+                const response = await fetch('data/news.json');
+                const data = await response.json();
+
+                // 過濾已發布的文章，按日期排序，取前 3 篇
+                const articles = data.articles
+                    .filter(a => a.published)
+                    .sort((a, b) => new Date(b.date) - new Date(a.date))
+                    .slice(0, 3);
+
+                if (articles.length === 0) {
+                    newsGrid.innerHTML = '<p class="news-empty">暫無最新消息</p>';
+                    return;
+                }
+
+                newsGrid.innerHTML = articles.map(article => `
+                    <div class="news-card">
+                        <div class="news-date">
+                            <i class="bi bi-calendar3"></i> ${article.date}
+                        </div>
+                        <h3 class="news-title">${article.title[lang] || article.title['en'] || ''}</h3>
+                        <p class="news-summary">${article.summary[lang] || article.summary['en'] || ''}</p>
+                    </div>
+                `).join('');
+
+            } catch (error) {
+                console.error('載入新聞失敗:', error);
+                newsGrid.innerHTML = '<p class="news-empty">載入失敗</p>';
+            }
+        }
+
+        // 頁面載入時執行
+        document.addEventListener('DOMContentLoaded', loadNews);
+    </script>
+
+    <style>
+        /* News Section Styles */
+        .news-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #0a0a14 0%, #12121f 100%);
+        }
+
+        .news-section .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .news-section .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .news-section .section-header p {
+            color: #888;
+            font-size: 1.1rem;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .news-card {
+            background: linear-gradient(145deg, #1a1a2e 0%, #16162a 100%);
+            border: 1px solid #2a2a4a;
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            border-color: #6c5ce7;
+            box-shadow: 0 10px 40px rgba(108, 92, 231, 0.2);
+        }
+
+        .news-date {
+            color: #6c5ce7;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .news-date i {
+            margin-right: 5px;
+        }
+
+        .news-title {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .news-summary {
+            color: #aaa;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .news-loading, .news-empty {
+            text-align: center;
+            color: #888;
+            padding: 40px;
+            grid-column: 1 / -1;
+        }
+
+        .news-loading i {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .news-section {
+                padding: 60px 20px;
+            }
+
+            .news-section .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        // 初始化主題（預設淺色模式）
+        function initTheme() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.remove('light-mode');
+                updateThemeIcons(false);
+            } else {
+                document.body.classList.add('light-mode');
+                updateThemeIcons(true);
+            }
+        }
+
+        // 切換主題
+        function toggleTheme() {
+            const isLight = document.body.classList.toggle('light-mode');
+            localStorage.setItem('nex_theme', isLight ? 'light' : 'dark');
+            updateThemeIcons(isLight);
+        }
+
+        // 更新圖示
+        function updateThemeIcons(isLight) {
+            const icon = isLight ? 'bi-moon-fill' : 'bi-sun-fill';
+            const desktopIcon = document.getElementById('themeIcon');
+            const mobileIcon = document.getElementById('mobileThemeIcon');
+
+            if (desktopIcon) {
+                desktopIcon.className = 'bi ' + icon;
+            }
+            if (mobileIcon) {
+                mobileIcon.className = 'bi ' + icon;
+            }
+        }
+
+        // 頁面載入時初始化
+        document.addEventListener('DOMContentLoaded', initTheme);
+
+        // 防止閃爍：立即執行（預設淺色模式）
+        (function() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme !== 'dark') {
+                document.body.classList.add('light-mode');
+            }
+        })();
+    </script>
+</body>
+</html>

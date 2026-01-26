@@ -1,0 +1,51 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "date": "2025-01-20",
+      "title": {
+        "zh-TW": "NEX 系統正式上線",
+        "zh-CN": "NEX 系统正式上线",
+        "en": "NEX System Official Launch",
+        "es": "Lanzamiento Oficial del Sistema NEX"
+      },
+      "summary": {
+        "zh-TW": "我們很高興宣布 NEX 社群會員管理系統正式上線，為您的加密貨幣社群提供完整的自動化解決方案。",
+        "zh-CN": "我们很高兴宣布 NEX 社群会员管理系统正式上线，为您的加密货币社群提供完整的自动化解决方案。",
+        "en": "We are excited to announce the official launch of NEX Community Member Management System, providing complete automation solutions for your cryptocurrency community.",
+        "es": "Nos complace anunciar el lanzamiento oficial del Sistema de Gestión de Miembros NEX, proporcionando soluciones de automatización completas para su comunidad de criptomonedas."
+      },
+      "content": {
+        "zh-TW": "NEX 系統整合了 Discord、Telegram 和 LINE 三大平台，提供自動化會員驗證、等級管理、邀請追蹤等功能。立即體驗我們的解決方案！",
+        "zh-CN": "NEX 系统整合了 Discord、Telegram 和 LINE 三大平台，提供自动化会员验证、等级管理、邀请追踪等功能。立即体验我们的解决方案！",
+        "en": "NEX integrates Discord, Telegram, and LINE platforms, offering automated member verification, tier management, and referral tracking. Experience our solution today!",
+        "es": "NEX integra las plataformas Discord, Telegram y LINE, ofreciendo verificación automatizada de miembros, gestión de niveles y seguimiento de referencias. ¡Experimente nuestra solución hoy!"
+      },
+      "published": true
+    },
+    {
+      "id": "2",
+      "date": "2025-01-18",
+      "title": {
+        "zh-TW": "新功能：多語言支援",
+        "zh-CN": "新功能：多语言支持",
+        "en": "New Feature: Multi-language Support",
+        "es": "Nueva Función: Soporte Multilingüe"
+      },
+      "summary": {
+        "zh-TW": "NEX 現已支援繁體中文、簡體中文、英文和西班牙文四種語言，讓全球用戶都能輕鬆使用。",
+        "zh-CN": "NEX 现已支持繁体中文、简体中文、英文和西班牙文四种语言，让全球用户都能轻松使用。",
+        "en": "NEX now supports Traditional Chinese, Simplified Chinese, English, and Spanish, making it accessible to users worldwide.",
+        "es": "NEX ahora admite chino tradicional, chino simplificado, inglés y español, haciéndolo accesible para usuarios de todo el mundo."
+      },
+      "content": {
+        "zh-TW": "為了服務更多用戶，我們新增了多語言支援功能。用戶可以在系統中自由切換語言，享受母語化的使用體驗。",
+        "zh-CN": "为了服务更多用户，我们新增了多语言支持功能。用户可以在系统中自由切换语言，享受母语化的使用体验。",
+        "en": "To serve more users, we have added multi-language support. Users can freely switch languages in the system for a native experience.",
+        "es": "Para servir a más usuarios, hemos añadido soporte multilingüe. Los usuarios pueden cambiar libremente de idioma en el sistema para una experiencia nativa."
+      },
+      "published": true
+    }
+  ],
+  "lastUpdated": "2025-01-20T10:00:00Z"
+}

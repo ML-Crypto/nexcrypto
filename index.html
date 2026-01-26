@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEX - 加密貨幣社群解決方案</title>
+    <meta name="description" content="NEX 提供專業的加密貨幣社群解決方案，包括會員管理系統、市場分析工具等服務。">
+
+    <!-- SEO & Social -->
+    <meta name="keywords" content="加密貨幣, 社群管理, Web3, 會員管理, 市場分析, OKX, Bybit, Binance">
+    <meta name="author" content="NEX">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="NEX - 加密貨幣社群解決方案">
+    <meta property="og:description" content="自動化會員管理、AI 驅動的市場分析、多平台整合。">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Performance: Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <!-- Performance: Preload critical assets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">NEX</a>
+
+            <div class="nav-center">
+                <a href="#products" class="nav-link">產品</a>
+                <a href="#about" class="nav-link">關於</a>
+                <a href="#contact" class="nav-link">聯繫</a>
+            </div>
+
+            <div class="nav-right">
+                <button class="theme-toggle" onclick="toggleTheme()" title="切換深色/淺色模式">
+                    <i class="bi bi-sun-fill" id="themeIcon"></i>
+                </button>
+                <div class="lang-switch">
+                    <button class="lang-btn">
+                        <i class="bi bi-globe"></i>
+                        <span>繁體</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown">
+                        <a href="index.html" class="active">繁體中文</a>
+                        <a href="index-en.html">English</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="mobile-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#products" onclick="toggleMenu()">產品</a>
+        <a href="#about" onclick="toggleMenu()">關於</a>
+        <a href="#contact" onclick="toggleMenu()">聯繫</a>
+        <div class="mobile-options">
+            <button class="mobile-theme" onclick="toggleTheme()">
+                <i class="bi bi-sun-fill" id="mobileThemeIcon"></i>
+                <span>切換主題</span>
+            </button>
+        </div>
+        <div class="mobile-lang">
+            <a href="index.html" class="active">繁體中文</a>
+            <a href="index-en.html">English</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-main">
+                    <div class="hero-label">Web3 社群基礎設施 — 從數據到行動的完整解決方案</div>
+                    <h1 class="hero-title">
+                        連接數據與行動的<br>
+                        <span class="text-gradient">社群</span><br>
+                        生態系統
+                    </h1>
+                    <p class="hero-desc">
+                        從數據分析到交易執行，從會員管理到收益分潤。為社群經營者打造一站式解決方案。
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#products" class="btn-primary">
+                            探索產品
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                        <a href="#about" class="btn-ghost">了解更多</a>
+                    </div>
+                </div>
+
+                <div class="hero-bento">
+                    <div class="bento-card bento-platforms">
+                        <div class="bento-header">
+                            <span class="bento-label">已連接平台</span>
+                            <span class="bento-status">
+                                <span class="dot green"></span>
+                                運作中
+                            </span>
+                        </div>
+                        <div class="platforms-list">
+                            <div class="platform-item">
+                                <div class="platform-icon discord"><i class="bi bi-discord"></i></div>
+                                <div class="platform-info">
+                                    <span class="name">Discord</span>
+                                    <span class="count">2,847</span>
+                                </div>
+                            </div>
+                            <div class="platform-item">
+                                <div class="platform-icon telegram"><i class="bi bi-telegram"></i></div>
+                                <div class="platform-info">
+                                    <span class="name">Telegram</span>
+                                    <span class="count">1,523</span>
+                                </div>
+                            </div>
+                            <div class="platform-item">
+                                <div class="platform-icon line"><i class="bi bi-line"></i></div>
+                                <div class="platform-info">
+                                    <span class="name">LINE</span>
+                                    <span class="count">986</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bento-card bento-stat">
+                        <span class="stat-value">5,356</span>
+                        <span class="stat-label">總會員數</span>
+                        <div class="stat-trend up">
+                            <i class="bi bi-arrow-up-short"></i>
+                            +12.5%
+                        </div>
+                    </div>
+
+                    <div class="bento-card bento-chart">
+                        <div class="bento-header">
+                            <span class="bento-label">每週活躍度</span>
+                        </div>
+                        <div class="mini-bars">
+                            <div class="bar" style="--h: 40%"></div>
+                            <div class="bar" style="--h: 65%"></div>
+                            <div class="bar" style="--h: 55%"></div>
+                            <div class="bar" style="--h: 80%"></div>
+                            <div class="bar" style="--h: 70%"></div>
+                            <div class="bar active" style="--h: 95%"></div>
+                            <div class="bar" style="--h: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <!-- Section Header -->
+            <header class="products-header">
+                <div class="header-left">
+                    <span class="section-eyebrow">產品方案</span>
+                    <h2 class="products-title">連接數據與行動的<br>核心工具</h2>
+                </div>
+                <p class="header-desc">
+                    從社群管理到市場分析，打造完整的生態系統解決方案，讓數據驅動每一個決策。
+                </p>
+            </header>
+
+            <!-- Product 1: Member Management -->
+            <article class="product-block">
+                <div class="product-wrapper">
+                    <div class="product-content">
+                        <div class="product-meta">
+                            <span class="product-num">01</span>
+                            <span class="product-tag blue">熱門方案</span>
+                        </div>
+                        <h3 class="product-name">社群會員管理系統</h3>
+                        <p class="product-desc">
+                            專為交易所代理商與加密貨幣社群設計的自動化會員管理方案。整合 Discord、Telegram、LINE 三大平台，自動處理驗證、等級與推薦獎勵。
+                        </p>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="bi bi-link-45deg"></i></div>
+                                <div class="feature-text">
+                                    <strong>API 自動綁定</strong>
+                                    <span>交易所帳戶一鍵綁定驗證</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="bi bi-trophy"></i></div>
+                                <div class="feature-text">
+                                    <strong>VIP 自動升降級</strong>
+                                    <span>依交易量自動調整等級</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="bi bi-people"></i></div>
+                                <div class="feature-text">
+                                    <strong>推薦獎勵追蹤</strong>
+                                    <span>多層級推薦佣金計算</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="member_management_site/index.html" class="product-cta">
+                            <span>了解更多</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="product-preview">
+                        <div class="preview-card">
+                            <div class="preview-header">
+                                <div class="dots"><span></span><span></span><span></span></div>
+                                <span class="preview-title">會員管理 Dashboard</span>
+                            </div>
+                            <div class="preview-body">
+                                <div class="stats-row">
+                                    <div class="stat-box">
+                                        <span class="stat-val">2,847</span>
+                                        <span class="stat-lbl">總成員</span>
+                                    </div>
+                                    <div class="stat-box accent">
+                                        <span class="stat-val">+324</span>
+                                        <span class="stat-lbl">本月新增</span>
+                                    </div>
+                                    <div class="stat-box">
+                                        <span class="stat-val">89%</span>
+                                        <span class="stat-lbl">活躍率</span>
+                                    </div>
+                                </div>
+                                <div class="chart-section">
+                                    <div class="chart-label">每日活躍度</div>
+                                    <div class="bar-chart">
+                                        <div class="bar-col"><div class="bar" style="--h:45%"></div><span>M</span></div>
+                                        <div class="bar-col"><div class="bar" style="--h:72%"></div><span>T</span></div>
+                                        <div class="bar-col"><div class="bar" style="--h:58%"></div><span>W</span></div>
+                                        <div class="bar-col"><div class="bar" style="--h:85%"></div><span>T</span></div>
+                                        <div class="bar-col highlight"><div class="bar" style="--h:92%"></div><span>F</span></div>
+                                        <div class="bar-col"><div class="bar" style="--h:68%"></div><span>S</span></div>
+                                        <div class="bar-col"><div class="bar" style="--h:55%"></div><span>S</span></div>
+                                    </div>
+                                </div>
+                                <div class="users-section">
+                                    <div class="user-item">
+                                        <div class="user-avatar">A</div>
+                                        <div class="user-info">
+                                            <span class="user-name">Alex_Trader</span>
+                                            <span class="user-volume">$128.5K 交易量</span>
+                                        </div>
+                                        <span class="user-tag vip">VIP</span>
+                                    </div>
+                                    <div class="user-item">
+                                        <div class="user-avatar purple">M</div>
+                                        <div class="user-info">
+                                            <span class="user-name">Mike_Crypto</span>
+                                            <span class="user-volume">$45.2K 交易量</span>
+                                        </div>
+                                        <span class="user-tag">Member</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 2: Crypto Deep -->
+            <article class="product-block alt">
+                <div class="product-wrapper reverse">
+                    <div class="product-content">
+                        <div class="product-meta">
+                            <span class="product-num">02</span>
+                            <span class="product-tag green">全新推出</span>
+                        </div>
+                        <h3 class="product-name">Crypto Deep 分析平台</h3>
+                        <p class="product-desc">
+                            AI 驅動的加密貨幣深度分析平台。結合 YOLO 圖形識別、資金費率監控、鯨魚動向追蹤，透過 Discord/Telegram 即時推送交易信號。
+                        </p>
+                        <div class="feature-list green">
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="bi bi-cpu"></i></div>
+                                <div class="feature-text">
+                                    <strong>AI 圖形識別</strong>
+                                    <span>YOLO 深度學習模型分析</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                                <div class="feature-text">
+                                    <strong>資金費率監控</strong>
+                                    <span>永續合約費率異常警報</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="bi bi-broadcast"></i></div>
+                                <div class="feature-text">
+                                    <strong>鯨魚動向追蹤</strong>
+                                    <span>大額資金流向即時通知</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="product-cta green disabled">
+                            <span>敬請期待</span>
+                            <i class="bi bi-clock"></i>
+                        </span>
+                    </div>
+                    <div class="product-preview">
+                        <div class="preview-card dark">
+                            <div class="preview-header">
+                                <div class="dots"><span></span><span></span><span></span></div>
+                                <span class="preview-title">Market Analysis</span>
+                            </div>
+                            <div class="preview-body">
+                                <div class="signal-feed">
+                                    <div class="signal-item">
+                                        <div class="signal-icon blue"><i class="bi bi-graph-up-arrow"></i></div>
+                                        <div class="signal-body">
+                                            <span class="signal-pair">BTC/USDT</span>
+                                            <span class="signal-desc">偵測到雙底型態，潛在反轉信號</span>
+                                        </div>
+                                        <div class="signal-badge blue">AI 信號</div>
+                                    </div>
+                                    <div class="signal-item">
+                                        <div class="signal-icon green"><i class="bi bi-water"></i></div>
+                                        <div class="signal-body">
+                                            <span class="signal-pair">ETH 鯨魚警報</span>
+                                            <span class="signal-desc">Binance 偵測到 $2.4M 大額買入</span>
+                                        </div>
+                                        <div class="signal-badge green">鯨魚</div>
+                                    </div>
+                                    <div class="signal-item">
+                                        <div class="signal-icon orange"><i class="bi bi-percent"></i></div>
+                                        <div class="signal-body">
+                                            <span class="signal-pair">資金費率異常</span>
+                                            <span class="signal-desc">BTC 永續合約費率達 0.15%</span>
+                                        </div>
+                                        <div class="signal-badge orange">警報</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-label">關於我們</span>
+                    <h2 class="about-title">打造加密貨幣<br>社群生態系統</h2>
+                    <p class="about-text">
+                        NEX 致力於成為連接「數據、決策、行動、社群」的中樞平台。我們不只提供工具，更打造完整的生態系統，讓社群經營者能夠一站式管理、分析、變現自己的交易社群。
+                    </p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-num">5+</span>
+                        <span class="stat-text">支援交易所</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">3</span>
+                        <span class="stat-text">整合平台</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">24/7</span>
+                        <span class="stat-text">全天候運作</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-bar">
+                <span class="contact-text">有任何問題或合作需求？</span>
+                <a href="member_management_site/contact.html" class="contact-link">
+                    聯繫我們
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">NEX</a>
+                </div>
+                <nav class="footer-links">
+                    <a href="member_management_site/index.html">會員管理系統</a>
+                    <span class="footer-link-disabled">Crypto Deep（即將推出）</span>
+                    <a href="#about">關於我們</a>
+                    <a href="#contact">聯繫我們</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 NEX. All rights reserved.</p>
+                <div class="footer-exchanges">
+                    <span class="footer-exchanges-label">支援交易所</span>
+                    <span class="ex-okx">OKX</span>
+                    <span class="ex-bybit">Bybit</span>
+                    <span class="ex-binance">Binance</span>
+                    <span class="ex-bingx">BingX</span>
+                    <span class="ex-bitget">Bitget</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+            document.querySelector('.mobile-btn').classList.toggle('active');
+        }
+
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const isDark = body.getAttribute('data-theme') !== 'light';
+
+            if (isDark) {
+                body.setAttribute('data-theme', 'light');
+                updateThemeIcons('bi-moon-fill');
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                updateThemeIcons('bi-sun-fill');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        function updateThemeIcons(iconClass) {
+            const icons = ['themeIcon', 'mobileThemeIcon'];
+            icons.forEach(id => {
+                const icon = document.getElementById(id);
+                if (icon) {
+                    icon.className = 'bi ' + iconClass;
+                }
+            });
+        }
+
+        // Load saved theme
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.setAttribute('data-theme', savedTheme);
+            updateThemeIcons(savedTheme === 'light' ? 'bi-moon-fill' : 'bi-sun-fill');
+        }
+
+        loadTheme();
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Enhanced Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+
+                    // Stagger children animation
+                    const children = entry.target.querySelectorAll('.stagger-item');
+                    children.forEach((child, index) => {
+                        child.style.transitionDelay = `${index * 0.1}s`;
+                        child.classList.add('visible');
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        const animatedElements = [
+            '.product-block',
+            '.stat-card',
+            '.bento-card',
+            '.about-grid',
+            '.section-title',
+            '.products-header',
+            '.feature-item'
+        ];
+
+        animatedElements.forEach(selector => {
+            document.querySelectorAll(selector).forEach(el => {
+                el.classList.add('animate-on-scroll');
+                observer.observe(el);
+            });
+        });
+
+        // Parallax effect for hero (subtle)
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const hero = document.querySelector('.hero');
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.setProperty('--scroll', scrolled * 0.3 + 'px');
+            }
+        });
+
+        // Card Tilt Effect (Desktop only)
+        if (window.innerWidth > 768) {
+            document.querySelectorAll('.preview-card, .bento-card').forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = (y - centerY) / 20;
+                    const rotateY = (centerX - x) / 20;
+
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+                });
+            });
+        }
+
+        // Smooth number counter animation for stats
+        function animateNumber(el, target) {
+            const duration = 1500;
+            const start = 0;
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const easeProgress = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(start + (target - start) * easeProgress);
+
+                el.textContent = current.toLocaleString();
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    el.textContent = target.toLocaleString();
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // Observe stat numbers for animation
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const numEl = entry.target.querySelector('.stat-num');
+                    if (numEl && !numEl.dataset.animated) {
+                        const text = numEl.textContent.trim();
+                        // Skip if contains non-numeric characters (like 24/7)
+                        if (/^[0-9]+$/.test(text)) {
+                            const num = parseInt(text);
+                            if (!isNaN(num) && num > 0) {
+                                numEl.dataset.animated = 'true';
+                                animateNumber(numEl, num);
+                            }
+                        }
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-card').forEach(el => {
+            statObserver.observe(el);
+        });
+    </script>
+</body>
+</html>

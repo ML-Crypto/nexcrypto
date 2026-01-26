@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEX - 全定制化会员管理系统</title>
+    <meta name="description" content="NEX 提供全定制化会员管理系统开发服务，整合 Discord、Telegram、LINE 多平台，根据您的需求量身打造专属解决方案。">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body id="top">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="home-zh-cn.html" class="logo">
+                <span class="logo-text">NEX</span>
+            </a>
+            <div class="nav-links">
+                <div class="products-dropdown">
+                    <button class="products-btn">产品 <i class="bi bi-chevron-down"></i></button>
+                    <div class="products-menu">
+                        <a href="discord-zh-cn.html" class="product-item">
+                            <i class="bi bi-discord"></i>
+                            <div>
+                                <strong>Discord 管理系统</strong>
+                                <span>自动验证、等级管理、邀请追踪</span>
+                            </div>
+                        </a>
+                        <a href="telegram-zh-cn.html" class="product-item">
+                            <i class="bi bi-telegram"></i>
+                            <div>
+                                <strong>Telegram 管理系统</strong>
+                                <span>群组验证、权限控制、自动管理</span>
+                            </div>
+                        </a>
+                        <a href="line-zh-cn.html" class="product-item">
+                            <i class="bi bi-line"></i>
+                            <div>
+                                <strong>LINE 管理系统</strong>
+                                <span>社区审核、成员验证、自动管理</span>
+                            </div>
+                        </a>
+                        <a href="custom-zh-cn.html" class="product-item active">
+                            <i class="bi bi-puzzle"></i>
+                            <div>
+                                <strong>全定制化方案</strong>
+                                <span>跨平台整合、量身打造</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="#features">功能特色</a>
+                <a href="#process">合作流程</a>
+                <a href="#faq">常见问题</a>
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" onclick="toggleTheme()" title="切换深色/浅色模式">
+                    <i class="bi bi-sun-fill" id="themeIcon"></i>
+                </button>
+                <div class="lang-dropdown">
+                    <button class="lang-btn"><i class="bi bi-globe"></i> 简体</button>
+                    <div class="lang-menu">
+                        <a href="custom.html">繁體中文</a>
+                        <a href="custom-zh-cn.html" class="active">简体中文</a>
+                        <a href="custom-en.html">English</a>
+                        <a href="custom-es.html">Español</a>
+                    </div>
+                </div>
+                <a href="contact-zh-cn.html">联系我们</a>
+            </div>
+            <div class="mobile-nav-group">
+                <!-- Mobile Theme Toggle -->
+                <button class="mobile-theme-toggle" onclick="toggleTheme()" title="切换深色/浅色模式">
+                    <i class="bi bi-sun-fill" id="mobileThemeIcon"></i>
+                </button>
+                <div class="mobile-lang-dropdown">
+                    <button class="mobile-lang-btn" onclick="toggleMobileLang()">
+                        <i class="bi bi-globe"></i>
+                    </button>
+                    <div class="mobile-lang-menu" id="mobileLangMenu">
+                        <a href="custom.html">繁體中文</a>
+                        <a href="custom-zh-cn.html" class="active">简体中文</a>
+                        <a href="custom-en.html">English</a>
+                        <a href="custom-es.html">Español</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-products-section">
+            <span class="mobile-section-title">产品</span>
+            <a href="discord-zh-cn.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-discord"></i> Discord 管理系统
+            </a>
+            <a href="telegram-zh-cn.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-telegram"></i> Telegram 管理系统
+            </a>
+            <a href="line-zh-cn.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-line"></i> LINE 管理系统
+            </a>
+            <a href="custom-zh-cn.html" class="mobile-product-item active" onclick="toggleMobileMenu()">
+                <i class="bi bi-puzzle"></i> 全定制化方案
+            </a>
+        </div>
+        <a href="#features" onclick="toggleMobileMenu()">功能特色</a>
+        <a href="#process" onclick="toggleMobileMenu()">合作流程</a>
+        <a href="#faq" onclick="toggleMobileMenu()">常见问题</a>
+        <a href="contact-zh-cn.html" onclick="toggleMobileMenu()">联系我们</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero hero-custom">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-split">
+                <div class="hero-left">
+                    <p class="hero-tag">跨平台整合，无限可能</p>
+                    <h1>您的想法，<span class="gradient-text">我们来实现</span></h1>
+                    <div class="hero-features">
+                        <p class="hero-feature-item">Discord + Telegram + LINE 全平台整合</p>
+                        <p class="hero-feature-item">根据需求量身打造专属功能</p>
+                        <p class="hero-feature-item">从概念到上线全程支持</p>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            <i class="bi bi-telegram"></i> 联系咨询
+                        </a>
+                        <a href="#features" class="btn btn-outline btn-lg">
+                            了解更多
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-logo-container">
+                        <div class="hero-logo-glow"></div>
+                        <div class="hero-logo-text"><i class="bi bi-puzzle" style="font-size: 0.8em;"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="platforms">
+        <div class="container">
+            <div class="platforms-row">
+                <p class="platforms-label">可整合平台</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <i class="bi bi-discord"></i>
+                        <span>Discord</span>
+                    </div>
+                    <div class="platform-item">
+                        <i class="bi bi-telegram"></i>
+                        <span>Telegram</span>
+                    </div>
+                    <div class="platform-item">
+                        <i class="bi bi-line"></i>
+                        <span>LINE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="platforms-divider"></div>
+            <div class="platforms-row">
+                <p class="platforms-label">可整合交易所</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <span class="platform-text-logo okx">OKX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bybit">BYB<span class="bybit-i">I</span>T</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bingx">BingX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo">更多...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Custom Section -->
+    <section class="audience">
+        <div class="container">
+            <div class="section-header">
+                <h2>为什么选择定制化？</h2>
+                <p>标准方案无法满足您的独特需求时，定制化是最佳解决方案</p>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-layers"></i>
+                    </div>
+                    <h3>多平台整合</h3>
+                    <p>将 Discord、Telegram、LINE 会员资料整合在同一个系统，统一管理</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-sliders"></i>
+                    </div>
+                    <h3>独特验证逻辑</h3>
+                    <p>根据您的业务需求设计专属的会员验证规则和等级制度</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+                    <h3>专属报表分析</h3>
+                    <p>打造符合您需求的数据分析仪表板和报表功能</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-link-45deg"></i>
+                    </div>
+                    <h3>第三方系统整合</h3>
+                    <p>与您现有的工具和系统进行 API 对接，实现自动化流程</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>可定制化的功能范例</h2>
+                <p>以下是部分可实现的功能，欢迎提出您的想法</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+                    <h3>跨平台会员同步</h3>
+                    <p>Discord、Telegram、LINE 会员资料即时同步，一次绑定多平台通用。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>自定义验证规则</h3>
+                    <p>根据交易量、持仓、入金额度、KYC 等条件设计专属验证逻辑。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+                    <h3>多层级 VIP 系统</h3>
+                    <p>设计符合您社区的 VIP 等级制度，自动升降级与权益分配。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <h3>进阶数据分析</h3>
+                    <p>定制化仪表板、报表导出、趋势分析，掌握社区全貌。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-robot"></i>
+                    </div>
+                    <h3>自动化工作流程</h3>
+                    <p>自动通知、排程任务、条件触发，减少人工操作。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-plug"></i>
+                    </div>
+                    <h3>API 与第三方整合</h3>
+                    <p>对接其他交易所、CRM 系统、支付平台等第三方服务。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-translate"></i>
+                    </div>
+                    <h3>多语言支持</h3>
+                    <p>机器人消息、管理界面支持多国语言，拓展国际社区。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-question-circle"></i>
+                    </div>
+                    <h3>还有更多...</h3>
+                    <p>有任何想法都欢迎提出讨论，我们会评估可行性并提供建议。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="how-it-works" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>合作流程</h2>
+                <p>从想法到上线，我们全程陪伴</p>
+            </div>
+            <div class="steps-container">
+                <div class="steps-row">
+                    <div class="steps-label">
+                        <i class="bi bi-arrow-right-circle"></i>
+                        <span>开发流程</span>
+                    </div>
+                    <div class="steps-grid-inline">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <div class="step-icon">
+                                <i class="bi bi-chat-dots"></i>
+                            </div>
+                            <h3>需求咨询</h3>
+                            <p>通过 Telegram 讨论您的想法和需求</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <div class="step-icon">
+                                <i class="bi bi-file-earmark-text"></i>
+                            </div>
+                            <h3>方案规划</h3>
+                            <p>确认功能规格、时程与报价</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <div class="step-icon">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                            <h3>开发测试</h3>
+                            <p>依规格开发并进行内部测试</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card highlight-card">
+                            <div class="step-number">4</div>
+                            <div class="step-icon">
+                                <i class="bi bi-rocket-takeoff"></i>
+                            </div>
+                            <h3>交付上线</h3>
+                            <p>部署系统、教学指导、持续支持</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security">
+        <div class="container">
+            <div class="section-header">
+                <h2>安全至上</h2>
+                <p>您的数据安全是我们的首要考量</p>
+            </div>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <h3>仅需读取权限</h3>
+                    <p>API 只需要读取权限，无法进行任何交易或提款操作，确保您的资产安全无虞。</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-hdd"></i>
+                    </div>
+                    <h3>数据本地存储</h3>
+                    <p>所有数据存储在您自己的设备上，不经过第三方服务器，完全掌控您的资料。</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>不接触用户资产</h3>
+                    <p>系统仅验证用户资格，不涉及任何资金操作，用户资产始终在交易所安全保管。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>常见问题</h2>
+                <p>关于定制化服务的常见疑问</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>定制化开发需要多长时间？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>开发时间取决于功能复杂度。简单的功能调整可能几天就能完成，完整的跨平台整合系统则需要较长时间。在咨询阶段我们会根据需求提供预估时程。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>定制化的费用如何计算？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>费用根据功能需求、开发复杂度和时间来评估。我们会在确认需求后提供详细报价，确保透明公开。欢迎先咨询讨论您的预算和需求。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>可以整合目前不支持的交易所吗？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>可以的。只要该交易所提供相关 API，我们就能进行整合开发。请提供您需要整合的交易所名称，我们会评估技术可行性。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>我有一个想法但不确定能不能实现？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>欢迎随时联系我们讨论！我们会评估您的想法在技术上的可行性，并提供建议和替代方案。很多创新功能都是从客户的想法开始的。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>开发完成后还有支持吗？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>是的，我们提供完整的售后技术支持。包括系统维护、问题排解、功能调整等。具体支持内容会在合作时明确说明。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>可以在现有的 Discord/LINE 系统上增加功能吗？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>可以。如果您已经购买我们的标准方案，可以在此基础上增加定制化功能。我们会评估现有系统架构，提供最佳的扩展方案。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>有想法？让我们聊聊</h2>
+                <p>无论您的想法多么独特，我们都乐意聆听并提供专业建议</p>
+                <a href="contact-zh-cn.html" class="btn btn-primary btn-lg">
+                    <i class="bi bi-chat-dots"></i> 联系我们
+                </a>
+                <p class="contact-note">
+                    <i class="bi bi-clock"></i> 通常在 24 小时内回复
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">NEX</span>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2026 NEX. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop">
+        <i class="bi bi-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <!-- Theme Toggle Script -->
+    <script>
+        function initTheme() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.remove('light-mode');
+                updateThemeIcons(false);
+            } else {
+                document.body.classList.add('light-mode');
+                updateThemeIcons(true);
+            }
+        }
+        function toggleTheme() {
+            const isLight = document.body.classList.toggle('light-mode');
+            localStorage.setItem('nex_theme', isLight ? 'light' : 'dark');
+            updateThemeIcons(isLight);
+        }
+        function updateThemeIcons(isLight) {
+            const icon = isLight ? 'bi-moon-fill' : 'bi-sun-fill';
+            const desktopIcon = document.getElementById('themeIcon');
+            const mobileIcon = document.getElementById('mobileThemeIcon');
+            if (desktopIcon) desktopIcon.className = 'bi ' + icon;
+            if (mobileIcon) mobileIcon.className = 'bi ' + icon;
+        }
+        document.addEventListener('DOMContentLoaded', initTheme);
+        (function() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme !== 'dark') document.body.classList.add('light-mode');
+        })();
+    </script>
+</body>
+</html>

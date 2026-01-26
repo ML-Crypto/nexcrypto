@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEX - Fully Customized Member Management System</title>
+    <meta name="description" content="NEX provides fully customized member management system development services. Integrate Discord, Telegram, LINE across platforms, tailored solutions based on your needs.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body id="top">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="home-en.html" class="logo">
+                <span class="logo-text">NEX</span>
+            </a>
+            <div class="nav-links">
+                <div class="products-dropdown">
+                    <button class="products-btn">Products <i class="bi bi-chevron-down"></i></button>
+                    <div class="products-menu">
+                        <a href="discord-en.html" class="product-item">
+                            <i class="bi bi-discord"></i>
+                            <div>
+                                <strong>Discord VIP Management</strong>
+                                <span>Auto verification, tier management, referral tracking</span>
+                            </div>
+                        </a>
+                        <a href="line-en.html" class="product-item">
+                            <i class="bi bi-line"></i>
+                            <div>
+                                <strong>LINE OpenChat Management</strong>
+                                <span>Community review, member verification, auto management</span>
+                            </div>
+                        </a>
+                        <a href="custom-en.html" class="product-item active">
+                            <i class="bi bi-puzzle"></i>
+                            <div>
+                                <strong>Fully Customized</strong>
+                                <span>Cross-platform integration, tailor-made</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="#features">Features</a>
+                <a href="#process">Process</a>
+                <a href="#faq">FAQ</a>
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">
+                    <i class="bi bi-sun-fill" id="themeIcon"></i>
+                </button>
+                <div class="lang-dropdown">
+                    <button class="lang-btn"><i class="bi bi-globe"></i> EN</button>
+                    <div class="lang-menu">
+                        <a href="custom.html">繁體中文</a>
+                        <a href="custom-zh-cn.html">简体中文</a>
+                        <a href="custom-en.html" class="active">English</a>
+                        <a href="custom-es.html">Español</a>
+                    </div>
+                </div>
+                <a href="contact-en.html">Contact</a>
+            </div>
+            <div class="mobile-nav-group">
+                <!-- Mobile Theme Toggle -->
+                <button class="mobile-theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">
+                    <i class="bi bi-sun-fill" id="mobileThemeIcon"></i>
+                </button>
+                <div class="mobile-lang-dropdown">
+                    <button class="mobile-lang-btn" onclick="toggleMobileLang()">
+                        <i class="bi bi-globe"></i>
+                    </button>
+                    <div class="mobile-lang-menu" id="mobileLangMenu">
+                        <a href="custom.html">繁體中文</a>
+                        <a href="custom-zh-cn.html">简体中文</a>
+                        <a href="custom-en.html" class="active">English</a>
+                        <a href="custom-es.html">Español</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-products-section">
+            <span class="mobile-section-title">Products</span>
+            <a href="discord-en.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-discord"></i> Discord VIP Management
+            </a>
+            <a href="line-en.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-line"></i> LINE OpenChat Management
+            </a>
+            <a href="custom-en.html" class="mobile-product-item active" onclick="toggleMobileMenu()">
+                <i class="bi bi-puzzle"></i> Fully Customized
+            </a>
+        </div>
+        <a href="#features" onclick="toggleMobileMenu()">Features</a>
+        <a href="#process" onclick="toggleMobileMenu()">Process</a>
+        <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+        <a href="contact-en.html" onclick="toggleMobileMenu()">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero hero-custom">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-split">
+                <div class="hero-left">
+                    <p class="hero-tag">Cross-Platform Integration, Unlimited Possibilities</p>
+                    <h1>Your Vision, <span class="gradient-text">We Build It</span></h1>
+                    <div class="hero-features">
+                        <p class="hero-feature-item">Discord + Telegram + LINE full platform integration</p>
+                        <p class="hero-feature-item">Custom features tailored to your needs</p>
+                        <p class="hero-feature-item">Full support from concept to launch</p>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            <i class="bi bi-telegram"></i> Contact Us
+                        </a>
+                        <a href="#features" class="btn btn-outline btn-lg">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-logo-container">
+                        <div class="hero-logo-glow"></div>
+                        <div class="hero-logo-text"><i class="bi bi-puzzle" style="font-size: 0.8em;"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="platforms">
+        <div class="container">
+            <div class="platforms-row">
+                <p class="platforms-label">INTEGRABLE PLATFORMS</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <i class="bi bi-discord"></i>
+                        <span>Discord</span>
+                    </div>
+                    <div class="platform-item">
+                        <i class="bi bi-telegram"></i>
+                        <span>Telegram</span>
+                    </div>
+                    <div class="platform-item">
+                        <i class="bi bi-line"></i>
+                        <span>LINE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="platforms-divider"></div>
+            <div class="platforms-row">
+                <p class="platforms-label">INTEGRABLE EXCHANGES</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <span class="platform-text-logo okx">OKX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bybit">BYB<span class="bybit-i">I</span>T</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bingx">BingX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo">More...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Custom Section -->
+    <section class="audience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Custom?</h2>
+                <p>When standard solutions can't meet your unique needs, customization is the best answer</p>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-layers"></i>
+                    </div>
+                    <h3>Multi-Platform Integration</h3>
+                    <p>Integrate Discord, Telegram, LINE member data into one system for unified management</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-sliders"></i>
+                    </div>
+                    <h3>Unique Verification Logic</h3>
+                    <p>Design exclusive member verification rules and tier systems based on your business needs</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+                    <h3>Custom Analytics</h3>
+                    <p>Build data analysis dashboards and reporting features that match your requirements</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-link-45deg"></i>
+                    </div>
+                    <h3>Third-Party Integration</h3>
+                    <p>API integration with your existing tools and systems to enable automated workflows</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Customizable Feature Examples</h2>
+                <p>Here are some possible features - feel free to share your ideas</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+                    <h3>Cross-Platform Member Sync</h3>
+                    <p>Real-time sync of Discord, Telegram, LINE member data. One binding works across all platforms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>Custom Verification Rules</h3>
+                    <p>Design exclusive verification logic based on trading volume, holdings, deposits, KYC, etc.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+                    <h3>Multi-Tier VIP System</h3>
+                    <p>Design VIP tier systems that fit your community, with auto upgrade/downgrade and benefit allocation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Custom dashboards, report exports, trend analysis - get a complete picture of your community.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-robot"></i>
+                    </div>
+                    <h3>Automated Workflows</h3>
+                    <p>Auto notifications, scheduled tasks, conditional triggers - reduce manual operations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-plug"></i>
+                    </div>
+                    <h3>API & Third-Party Integration</h3>
+                    <p>Connect with other exchanges, CRM systems, payment platforms and other third-party services.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-translate"></i>
+                    </div>
+                    <h3>Multi-Language Support</h3>
+                    <p>Bot messages and admin interface in multiple languages to expand your international community.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-question-circle"></i>
+                    </div>
+                    <h3>And More...</h3>
+                    <p>Any ideas are welcome for discussion. We'll evaluate feasibility and provide recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="how-it-works" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Development Process</h2>
+                <p>From idea to launch, we're with you every step</p>
+            </div>
+            <div class="steps-container">
+                <div class="steps-row">
+                    <div class="steps-label">
+                        <i class="bi bi-arrow-right-circle"></i>
+                        <span>Workflow</span>
+                    </div>
+                    <div class="steps-grid-inline">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <div class="step-icon">
+                                <i class="bi bi-chat-dots"></i>
+                            </div>
+                            <h3>Consultation</h3>
+                            <p>Discuss your ideas and requirements via Telegram</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <div class="step-icon">
+                                <i class="bi bi-file-earmark-text"></i>
+                            </div>
+                            <h3>Planning</h3>
+                            <p>Confirm specifications, timeline and quote</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <div class="step-icon">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                            <h3>Development</h3>
+                            <p>Build according to specs and conduct testing</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card highlight-card">
+                            <div class="step-number">4</div>
+                            <div class="step-icon">
+                                <i class="bi bi-rocket-takeoff"></i>
+                            </div>
+                            <h3>Launch</h3>
+                            <p>Deploy system, provide training, ongoing support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security">
+        <div class="container">
+            <div class="section-header">
+                <h2>Security First</h2>
+                <p>Your data security is our top priority</p>
+            </div>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <h3>Read-Only Access</h3>
+                    <p>Exchange API only requires read permissions. Cannot perform any trades or withdrawals, ensuring your assets remain secure.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-hdd"></i>
+                    </div>
+                    <h3>Local Data Storage</h3>
+                    <p>All data stored on your own device, never passes through third-party servers. You have full control of your data.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>No Asset Access</h3>
+                    <p>System only verifies user eligibility, never touches any funds. User assets always stay safe on the exchange.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>FAQ</h2>
+                <p>Common questions about custom development services</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>How long does custom development take?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Development time depends on feature complexity. Simple adjustments may take just a few days, while complete cross-platform integration systems require more time. We'll provide an estimated timeline during the consultation phase.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>How is custom pricing calculated?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pricing is based on feature requirements, development complexity, and time. We provide detailed quotes after confirming requirements to ensure transparency. Feel free to discuss your budget and needs first.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>Can you integrate exchanges not currently supported?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. As long as the exchange provides relevant APIs, we can develop the integration. Please provide the exchange name you need, and we'll evaluate technical feasibility.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>I have an idea but not sure if it's possible?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Feel free to contact us anytime! We'll evaluate the technical feasibility of your idea and provide suggestions and alternatives. Many innovative features started from customer ideas.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>Is there support after development is complete?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we provide comprehensive after-sales technical support including system maintenance, troubleshooting, and feature adjustments. Specific support details will be clearly stated during collaboration.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>Can I add features to existing Discord/LINE systems?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. If you've already purchased our standard solutions, you can add custom features on top. We'll evaluate the existing system architecture and provide the best expansion plan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Got an Idea? Let's Talk</h2>
+                <p>No matter how unique your idea is, we're happy to listen and provide professional advice</p>
+                <a href="contact-en.html" class="btn btn-primary btn-lg">
+                    <i class="bi bi-chat-dots"></i> Contact Us
+                </a>
+                <p class="contact-note">
+                    <i class="bi bi-clock"></i> Usually replies within 24 hours
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">NEX</span>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2026 NEX. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop">
+        <i class="bi bi-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <!-- Theme Toggle Script -->
+    <script>
+        function initTheme() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.remove('light-mode');
+                updateThemeIcons(false);
+            } else {
+                document.body.classList.add('light-mode');
+                updateThemeIcons(true);
+            }
+        }
+        function toggleTheme() {
+            const isLight = document.body.classList.toggle('light-mode');
+            localStorage.setItem('nex_theme', isLight ? 'light' : 'dark');
+            updateThemeIcons(isLight);
+        }
+        function updateThemeIcons(isLight) {
+            const icon = isLight ? 'bi-moon-fill' : 'bi-sun-fill';
+            const desktopIcon = document.getElementById('themeIcon');
+            const mobileIcon = document.getElementById('mobileThemeIcon');
+            if (desktopIcon) desktopIcon.className = 'bi ' + icon;
+            if (mobileIcon) mobileIcon.className = 'bi ' + icon;
+        }
+        document.addEventListener('DOMContentLoaded', initTheme);
+        (function() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme !== 'dark') document.body.classList.add('light-mode');
+        })();
+    </script>
+</body>
+</html>

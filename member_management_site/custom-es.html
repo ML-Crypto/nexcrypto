@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEX - Sistema de Gestión de Miembros Totalmente Personalizado</title>
+    <meta name="description" content="NEX ofrece servicios de desarrollo de sistemas de gestión de miembros totalmente personalizados. Integra Discord, Telegram, LINE en múltiples plataformas, soluciones a medida según tus necesidades.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body id="top">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="home-es.html" class="logo">
+                <span class="logo-text">NEX</span>
+            </a>
+            <div class="nav-links">
+                <div class="products-dropdown">
+                    <button class="products-btn">Productos <i class="bi bi-chevron-down"></i></button>
+                    <div class="products-menu">
+                        <a href="discord-es.html" class="product-item">
+                            <i class="bi bi-discord"></i>
+                            <div>
+                                <strong>Gestión VIP Discord</strong>
+                                <span>Verificación automática, gestión de niveles, seguimiento de referidos</span>
+                            </div>
+                        </a>
+                        <a href="line-es.html" class="product-item">
+                            <i class="bi bi-line"></i>
+                            <div>
+                                <strong>Gestión LINE OpenChat</strong>
+                                <span>Revisión de comunidad, verificación de miembros, gestión automática</span>
+                            </div>
+                        </a>
+                        <a href="custom-es.html" class="product-item active">
+                            <i class="bi bi-puzzle"></i>
+                            <div>
+                                <strong>Totalmente Personalizado</strong>
+                                <span>Integración multiplataforma, a medida</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="#features">Funciones</a>
+                <a href="#process">Proceso</a>
+                <a href="#faq">FAQ</a>
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar modo oscuro/claro">
+                    <i class="bi bi-sun-fill" id="themeIcon"></i>
+                </button>
+                <div class="lang-dropdown">
+                    <button class="lang-btn"><i class="bi bi-globe"></i> ES</button>
+                    <div class="lang-menu">
+                        <a href="custom.html">繁體中文</a>
+                        <a href="custom-zh-cn.html">简体中文</a>
+                        <a href="custom-en.html">English</a>
+                        <a href="custom-es.html" class="active">Español</a>
+                    </div>
+                </div>
+                <a href="contact-es.html">Contacto</a>
+            </div>
+            <div class="mobile-nav-group">
+                <!-- Mobile Theme Toggle -->
+                <button class="mobile-theme-toggle" onclick="toggleTheme()" title="Cambiar modo oscuro/claro">
+                    <i class="bi bi-sun-fill" id="mobileThemeIcon"></i>
+                </button>
+                <div class="mobile-lang-dropdown">
+                    <button class="mobile-lang-btn" onclick="toggleMobileLang()">
+                        <i class="bi bi-globe"></i>
+                    </button>
+                    <div class="mobile-lang-menu" id="mobileLangMenu">
+                        <a href="custom.html">繁體中文</a>
+                        <a href="custom-zh-cn.html">简体中文</a>
+                        <a href="custom-en.html">English</a>
+                        <a href="custom-es.html" class="active">Español</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-products-section">
+            <span class="mobile-section-title">Productos</span>
+            <a href="discord-es.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-discord"></i> Gestión VIP Discord
+            </a>
+            <a href="line-es.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-line"></i> Gestión LINE OpenChat
+            </a>
+            <a href="custom-es.html" class="mobile-product-item active" onclick="toggleMobileMenu()">
+                <i class="bi bi-puzzle"></i> Totalmente Personalizado
+            </a>
+        </div>
+        <a href="#features" onclick="toggleMobileMenu()">Funciones</a>
+        <a href="#process" onclick="toggleMobileMenu()">Proceso</a>
+        <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+        <a href="contact-es.html" onclick="toggleMobileMenu()">Contacto</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero hero-custom">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-split">
+                <div class="hero-left">
+                    <p class="hero-tag">Integración Multiplataforma, Posibilidades Ilimitadas</p>
+                    <h1>Tu Visión, <span class="gradient-text">Nosotros la Construimos</span></h1>
+                    <div class="hero-features">
+                        <p class="hero-feature-item">Integración completa Discord + Telegram + LINE</p>
+                        <p class="hero-feature-item">Funciones personalizadas según tus necesidades</p>
+                        <p class="hero-feature-item">Soporte completo desde el concepto hasta el lanzamiento</p>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            <i class="bi bi-telegram"></i> Contactar
+                        </a>
+                        <a href="#features" class="btn btn-outline btn-lg">
+                            Saber Más
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-logo-container">
+                        <div class="hero-logo-glow"></div>
+                        <div class="hero-logo-text"><i class="bi bi-puzzle" style="font-size: 0.8em;"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="platforms">
+        <div class="container">
+            <div class="platforms-row">
+                <p class="platforms-label">PLATAFORMAS INTEGRABLES</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <i class="bi bi-discord"></i>
+                        <span>Discord</span>
+                    </div>
+                    <div class="platform-item">
+                        <i class="bi bi-telegram"></i>
+                        <span>Telegram</span>
+                    </div>
+                    <div class="platform-item">
+                        <i class="bi bi-line"></i>
+                        <span>LINE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="platforms-divider"></div>
+            <div class="platforms-row">
+                <p class="platforms-label">EXCHANGES INTEGRABLES</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <span class="platform-text-logo okx">OKX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bybit">BYB<span class="bybit-i">I</span>T</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bingx">BingX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo">Más...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Custom Section -->
+    <section class="audience">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Por Qué Elegir Personalizado?</h2>
+                <p>Cuando las soluciones estándar no satisfacen tus necesidades únicas, la personalización es la mejor respuesta</p>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-layers"></i>
+                    </div>
+                    <h3>Integración Multiplataforma</h3>
+                    <p>Integra datos de miembros de Discord, Telegram, LINE en un solo sistema para gestión unificada</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-sliders"></i>
+                    </div>
+                    <h3>Lógica de Verificación Única</h3>
+                    <p>Diseña reglas de verificación de miembros y sistemas de niveles exclusivos según tus necesidades</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+                    <h3>Análisis Personalizado</h3>
+                    <p>Construye paneles de análisis de datos y funciones de informes que coincidan con tus requisitos</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-link-45deg"></i>
+                    </div>
+                    <h3>Integración de Terceros</h3>
+                    <p>Integración API con tus herramientas y sistemas existentes para habilitar flujos automatizados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ejemplos de Funciones Personalizables</h2>
+                <p>Aquí hay algunas funciones posibles - comparte tus ideas</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+                    <h3>Sincronización Multiplataforma</h3>
+                    <p>Sincronización en tiempo real de datos de miembros de Discord, Telegram, LINE. Una vinculación funciona en todas las plataformas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>Reglas de Verificación Personalizadas</h3>
+                    <p>Diseña lógica de verificación exclusiva basada en volumen de trading, holdings, depósitos, KYC, etc.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+                    <h3>Sistema VIP Multinivel</h3>
+                    <p>Diseña sistemas de niveles VIP que se adapten a tu comunidad, con ascenso/descenso automático y asignación de beneficios.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <h3>Análisis Avanzado</h3>
+                    <p>Paneles personalizados, exportación de informes, análisis de tendencias - obtén una imagen completa de tu comunidad.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-robot"></i>
+                    </div>
+                    <h3>Flujos Automatizados</h3>
+                    <p>Notificaciones automáticas, tareas programadas, disparadores condicionales - reduce operaciones manuales.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-plug"></i>
+                    </div>
+                    <h3>API e Integración de Terceros</h3>
+                    <p>Conecta con otros exchanges, sistemas CRM, plataformas de pago y otros servicios de terceros.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-translate"></i>
+                    </div>
+                    <h3>Soporte Multiidioma</h3>
+                    <p>Mensajes del bot e interfaz de administración en múltiples idiomas para expandir tu comunidad internacional.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-question-circle"></i>
+                    </div>
+                    <h3>Y Más...</h3>
+                    <p>Cualquier idea es bienvenida para discusión. Evaluaremos la viabilidad y proporcionaremos recomendaciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="how-it-works" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Proceso de Desarrollo</h2>
+                <p>Desde la idea hasta el lanzamiento, te acompañamos en cada paso</p>
+            </div>
+            <div class="steps-container">
+                <div class="steps-row">
+                    <div class="steps-label">
+                        <i class="bi bi-arrow-right-circle"></i>
+                        <span>Flujo de Trabajo</span>
+                    </div>
+                    <div class="steps-grid-inline">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <div class="step-icon">
+                                <i class="bi bi-chat-dots"></i>
+                            </div>
+                            <h3>Consulta</h3>
+                            <p>Discute tus ideas y requisitos vía Telegram</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <div class="step-icon">
+                                <i class="bi bi-file-earmark-text"></i>
+                            </div>
+                            <h3>Planificación</h3>
+                            <p>Confirmar especificaciones, cronograma y presupuesto</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <div class="step-icon">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                            <h3>Desarrollo</h3>
+                            <p>Construir según especificaciones y realizar pruebas</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card highlight-card">
+                            <div class="step-number">4</div>
+                            <div class="step-icon">
+                                <i class="bi bi-rocket-takeoff"></i>
+                            </div>
+                            <h3>Lanzamiento</h3>
+                            <p>Desplegar sistema, capacitación, soporte continuo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security">
+        <div class="container">
+            <div class="section-header">
+                <h2>Seguridad Primero</h2>
+                <p>La seguridad de tus datos es nuestra máxima prioridad</p>
+            </div>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <h3>Acceso Solo Lectura</h3>
+                    <p>La API del exchange solo requiere permisos de lectura. No puede realizar trades o retiros, asegurando que tus activos permanezcan seguros.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-hdd"></i>
+                    </div>
+                    <h3>Almacenamiento Local</h3>
+                    <p>Todos los datos se almacenan en tu dispositivo, nunca pasan por servidores de terceros. Control total de tus datos.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>Sin Acceso a Activos</h3>
+                    <p>El sistema solo verifica elegibilidad, nunca toca fondos. Los activos siempre permanecen seguros en el exchange.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>FAQ</h2>
+                <p>Preguntas comunes sobre servicios de desarrollo personalizado</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Cuánto tiempo toma el desarrollo personalizado?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El tiempo de desarrollo depende de la complejidad de las funciones. Ajustes simples pueden tomar solo unos días, mientras que sistemas completos de integración multiplataforma requieren más tiempo. Proporcionaremos un cronograma estimado durante la fase de consulta.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Cómo se calcula el precio personalizado?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El precio se basa en requisitos de funciones, complejidad del desarrollo y tiempo. Proporcionamos presupuestos detallados después de confirmar requisitos para asegurar transparencia. Siéntete libre de discutir tu presupuesto y necesidades primero.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Pueden integrar exchanges no soportados actualmente?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí. Siempre que el exchange proporcione APIs relevantes, podemos desarrollar la integración. Por favor proporciona el nombre del exchange que necesitas, y evaluaremos la viabilidad técnica.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>Tengo una idea pero no estoy seguro si es posible?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>¡Contáctanos cuando quieras! Evaluaremos la viabilidad técnica de tu idea y proporcionaremos sugerencias y alternativas. Muchas funciones innovadoras comenzaron con ideas de clientes.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Hay soporte después de completar el desarrollo?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, proporcionamos soporte técnico post-venta completo incluyendo mantenimiento del sistema, resolución de problemas y ajustes de funciones. Los detalles específicos de soporte se indicarán claramente durante la colaboración.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Puedo agregar funciones a sistemas Discord/LINE existentes?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí. Si ya has comprado nuestras soluciones estándar, puedes agregar funciones personalizadas encima. Evaluaremos la arquitectura del sistema existente y proporcionaremos el mejor plan de expansión.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>¿Tienes una Idea? Hablemos</h2>
+                <p>No importa cuán única sea tu idea, estamos encantados de escuchar y proporcionar asesoramiento profesional</p>
+                <a href="contact-es.html" class="btn btn-primary btn-lg">
+                    <i class="bi bi-chat-dots"></i> Contactar
+                </a>
+                <p class="contact-note">
+                    <i class="bi bi-clock"></i> Normalmente responde dentro de 24 horas
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">NEX</span>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2026 NEX. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop">
+        <i class="bi bi-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <!-- Theme Toggle Script -->
+    <script>
+        function initTheme() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.remove('light-mode');
+                updateThemeIcons(false);
+            } else {
+                document.body.classList.add('light-mode');
+                updateThemeIcons(true);
+            }
+        }
+        function toggleTheme() {
+            const isLight = document.body.classList.toggle('light-mode');
+            localStorage.setItem('nex_theme', isLight ? 'light' : 'dark');
+            updateThemeIcons(isLight);
+        }
+        function updateThemeIcons(isLight) {
+            const icon = isLight ? 'bi-moon-fill' : 'bi-sun-fill';
+            const desktopIcon = document.getElementById('themeIcon');
+            const mobileIcon = document.getElementById('mobileThemeIcon');
+            if (desktopIcon) desktopIcon.className = 'bi ' + icon;
+            if (mobileIcon) mobileIcon.className = 'bi ' + icon;
+        }
+        document.addEventListener('DOMContentLoaded', initTheme);
+        (function() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme !== 'dark') document.body.classList.add('light-mode');
+        })();
+    </script>
+</body>
+</html>

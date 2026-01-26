@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEX - Soluciones de Gestión de Miembros de Comunidad</title>
+    <meta name="description" content="NEX proporciona sistemas profesionales de gestión de miembros para Discord y LINE OpenChat. Verificación automatizada, gestión de niveles, seguimiento de referidos - soluciones completas para tu comunidad crypto.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body id="top">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#top" class="logo">
+                <span class="logo-text">NEX</span>
+            </a>
+            <div class="nav-links">
+                <div class="products-dropdown">
+                    <button class="products-btn">Productos <i class="bi bi-chevron-down"></i></button>
+                    <div class="products-menu">
+                        <a href="discord-es.html" class="product-item">
+                            <i class="bi bi-discord"></i>
+                            <div>
+                                <strong>Sistema de Gestión Discord</strong>
+                                <span>Verificación automática, gestión de niveles, seguimiento de referidos</span>
+                            </div>
+                        </a>
+                        <a href="telegram-es.html" class="product-item">
+                            <i class="bi bi-telegram"></i>
+                            <div>
+                                <strong>Sistema de Gestión Telegram</strong>
+                                <span>Verificación de grupo, control de permisos, gestión automática</span>
+                            </div>
+                        </a>
+                        <a href="line-es.html" class="product-item">
+                            <i class="bi bi-line"></i>
+                            <div>
+                                <strong>Sistema de Gestión LINE</strong>
+                                <span>Revisión de comunidad, verificación de miembros, gestión automática</span>
+                            </div>
+                        </a>
+                        <a href="custom-es.html" class="product-item">
+                            <i class="bi bi-puzzle"></i>
+                            <div>
+                                <strong>Solución Totalmente Personalizada</strong>
+                                <span>Integración multiplataforma, a medida</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="#why-nex">Por Qué NEX</a>
+                <a href="#security">Seguridad</a>
+                <a href="contact-es.html">Contacto</a>
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar modo oscuro/claro">
+                    <i class="bi bi-sun-fill" id="themeIcon"></i>
+                </button>
+                <div class="lang-dropdown">
+                    <button class="lang-btn"><i class="bi bi-globe"></i> ES</button>
+                    <div class="lang-menu">
+                        <a href="index.html">繁體中文</a>
+                        <a href="home-zh-cn.html">简体中文</a>
+                        <a href="home-en.html">English</a>
+                        <a href="home-es.html" class="active">Español</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-nav-group">
+                <!-- Mobile Theme Toggle -->
+                <button class="mobile-theme-toggle" onclick="toggleTheme()" title="Cambiar modo oscuro/claro">
+                    <i class="bi bi-sun-fill" id="mobileThemeIcon"></i>
+                </button>
+                <div class="mobile-lang-dropdown">
+                    <button class="mobile-lang-btn" onclick="toggleMobileLang()">
+                        <i class="bi bi-globe"></i>
+                    </button>
+                    <div class="mobile-lang-menu" id="mobileLangMenu">
+                        <a href="index.html">繁體中文</a>
+                        <a href="home-zh-cn.html">简体中文</a>
+                        <a href="home-en.html">English</a>
+                        <a href="home-es.html" class="active">Español</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-products-section">
+            <span class="mobile-section-title">Productos</span>
+            <a href="discord-es.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-discord"></i> Sistema de Gestión Discord
+            </a>
+            <a href="telegram-es.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-telegram"></i> Sistema de Gestión Telegram
+            </a>
+            <a href="line-es.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-line"></i> Sistema de Gestión LINE
+            </a>
+            <a href="custom-es.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-puzzle"></i> Solución Totalmente Personalizada
+            </a>
+        </div>
+        <a href="#why-nex" onclick="toggleMobileMenu()">Por Qué NEX</a>
+        <a href="#security" onclick="toggleMobileMenu()">Seguridad</a>
+        <a href="contact-es.html" onclick="toggleMobileMenu()">Contacto</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero hero-home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-split">
+                <!-- Left: Text Content -->
+                <div class="hero-left">
+                    <p class="hero-tag">Diseñado para Afiliados de Exchanges y Comunidades Crypto</p>
+                    <h1>Gestión de Miembros de Comunidad<br><span class="gradient-text">Soluciones Automatizadas</span></h1>
+                    <p class="hero-subtitle">
+                        <span class="highlight">Desde verificación de miembros hasta gestión de niveles, desde seguimiento de referidos hasta análisis de datos</span>
+                        <span class="subtext">NEX proporciona sistemas de gestión todo-en-uno para tu comunidad</span>
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary btn-lg">
+                            <i class="bi bi-grid"></i> Ver Productos
+                        </a>
+                        <a href="#contact" class="btn btn-outline btn-lg">
+                            Contactar
+                        </a>
+                    </div>
+                </div>
+                <!-- Right: Animated NEX Logo -->
+                <div class="hero-right">
+                    <div class="hero-logo-container">
+                        <div class="hero-logo-glow"></div>
+                        <div class="hero-logo-text">NEX</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scroll Down Indicator -->
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="platforms">
+        <div class="container">
+            <div class="platforms-row">
+                <p class="platforms-label">PLATAFORMAS COMPATIBLES</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <i class="bi bi-discord"></i>
+                        <span>Discord</span>
+                    </div>
+                    <div class="platform-item">
+                        <i class="bi bi-telegram"></i>
+                        <span>Telegram</span>
+                    </div>
+                    <div class="platform-item">
+                        <i class="bi bi-line"></i>
+                        <span>LINE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="platforms-divider"></div>
+            <div class="platforms-row">
+                <p class="platforms-label">EXCHANGES COMPATIBLES</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <span class="platform-text-logo okx">OKX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bybit">BYB<span class="bybit-i">I</span>T</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bingx">BingX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo binance">Binance</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bitget">Bitget</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section" id="news">
+        <div class="container">
+            <div class="section-header">
+                <h2>Últimas Noticias</h2>
+                <p>Mantente actualizado con los anuncios y actualizaciones de NEX</p>
+            </div>
+            <div class="news-grid" id="newsGrid">
+                <div class="news-loading">
+                    <i class="bi bi-hourglass-split"></i> Cargando...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Productos</h2>
+                <p>Elige el sistema de gestión que se adapte a tu comunidad</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon discord">
+                        <i class="bi bi-discord"></i>
+                    </div>
+                    <h3>Sistema de Gestión Discord</h3>
+                    <p class="product-desc">Solución completa de gestión de miembros VIP para comunidades Discord, con integración de grupos Telegram</p>
+                    <ul class="product-features">
+                        <li><i class="bi bi-check2"></i> Comandos slash de Discord Bot</li>
+                        <li><i class="bi bi-check2"></i> Integración con grupos Telegram</li>
+                        <li><i class="bi bi-check2"></i> Verificación automática API de exchange</li>
+                        <li><i class="bi bi-check2"></i> Ascenso/descenso automático de nivel VIP</li>
+                        <li><i class="bi bi-check2"></i> Sistema de seguimiento de referidos</li>
+                        <li><i class="bi bi-check2"></i> Panel de administración web</li>
+                    </ul>
+                    <div class="product-exchanges">
+                        <span>Exchanges compatibles:</span>
+                        <span class="exchange-tag">OKX</span>
+                        <span class="exchange-tag">Bybit</span>
+                        <span class="exchange-tag">BingX</span>
+                    </div>
+                    <a href="discord-es.html" class="btn btn-primary btn-block">
+                        Saber Más <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon line">
+                        <i class="bi bi-line"></i>
+                    </div>
+                    <h3>Sistema de Gestión LINE</h3>
+                    <p class="product-desc">Solución automatizada de revisión y gestión de miembros para comunidades LINE</p>
+                    <ul class="product-features">
+                        <li><i class="bi bi-check2"></i> Integración LINE OpenChat</li>
+                        <li><i class="bi bi-check2"></i> Revisión automática de solicitudes</li>
+                        <li><i class="bi bi-check2"></i> Verificación automática API de exchange</li>
+                        <li><i class="bi bi-check2"></i> Configuración de preguntas de ingreso</li>
+                        <li><i class="bi bi-check2"></i> Gestión de fusión de miembros</li>
+                        <li><i class="bi bi-check2"></i> Panel de administración web</li>
+                    </ul>
+                    <div class="product-exchanges">
+                        <span>Exchanges compatibles:</span>
+                        <span class="exchange-tag">OKX</span>
+                        <span class="exchange-tag">Bybit</span>
+                        <span class="exchange-tag">BingX</span>
+                        <span class="exchange-tag">Binance</span>
+                        <span class="exchange-tag">Bitget</span>
+                    </div>
+                    <a href="line-es.html" class="btn btn-primary btn-block">
+                        Saber Más <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon telegram">
+                        <i class="bi bi-telegram"></i>
+                    </div>
+                    <h3>Sistema de Gestión Telegram</h3>
+                    <p class="product-desc">Solución completa de gestión de miembros para grupos Telegram, con verificación automatizada y control de permisos</p>
+                    <ul class="product-features">
+                        <li><i class="bi bi-check2"></i> Comandos de Telegram Bot</li>
+                        <li><i class="bi bi-check2"></i> Verificación automática API de exchange</li>
+                        <li><i class="bi bi-check2"></i> Ascenso/descenso automático de nivel VIP</li>
+                        <li><i class="bi bi-check2"></i> Gestión automática de permisos de grupo</li>
+                        <li><i class="bi bi-check2"></i> Sistema de seguimiento de referidos</li>
+                        <li><i class="bi bi-check2"></i> Panel de administración web</li>
+                    </ul>
+                    <div class="product-exchanges">
+                        <span>Exchanges compatibles:</span>
+                        <span class="exchange-tag">OKX</span>
+                        <span class="exchange-tag">Bybit</span>
+                        <span class="exchange-tag">BingX</span>
+                    </div>
+                    <a href="telegram-es.html" class="btn btn-primary btn-block">
+                        Saber Más <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Custom Solution Banner -->
+            <div class="custom-banner">
+                <div class="custom-banner-content">
+                    <i class="bi bi-puzzle"></i>
+                    <div class="custom-banner-text">
+                        <strong>¿Necesitas integración multiplataforma o funciones especiales?</strong>
+                        <span>Ofrecemos servicios de desarrollo totalmente personalizados según tus necesidades</span>
+                    </div>
+                    <a href="custom-es.html" class="btn btn-outline">
+                        Conocer Soluciones Personalizadas <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why NEX Section -->
+    <section class="why-nex" id="why-nex">
+        <div class="container">
+            <div class="section-header">
+                <h2>Por Qué Elegir NEX</h2>
+                <p>Nos enfocamos en proporcionar la mejor experiencia de gestión de miembros para comunidades crypto</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-robot"></i>
+                    </div>
+                    <h3>Completamente Automatizado</h3>
+                    <p>Desde registro de miembros, verificación de exchange hasta ajustes de nivel VIP, todo automatizado para ahorrar tu valioso tiempo de gestión.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h3>Integración API de Exchanges</h3>
+                    <p>Compatible con OKX, Bybit, BingX y otros exchanges principales. Verifica automáticamente volumen de trading, depósitos y estado KYC.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-window"></i>
+                    </div>
+                    <h3>Interfaz Intuitiva</h3>
+                    <p>Panel de administración web moderno para ver datos de miembros en tiempo real, ajustar configuraciones con operaciones simples e intuitivas.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-headset"></i>
+                    </div>
+                    <h3>Soporte Profesional</h3>
+                    <p>Guía de instalación completa y soporte técnico proporcionado. Respuesta rápida a tus preguntas via Telegram.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-puzzle"></i>
+                    </div>
+                    <h3>Personalización Flexible</h3>
+                    <p>Personaliza funciones según tus necesidades para crear el sistema de gestión más adecuado para tu comunidad.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-hdd-stack"></i>
+                    </div>
+                    <h3>Despliegue Local</h3>
+                    <p>Sistema desplegado en tu propio dispositivo, datos completamente controlados por ti, sin dependencia de servicios cloud de terceros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="audience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Diseñado Para Ti</h2>
+                <p>Sin importar qué tipo de comunidad crypto administres, NEX puede ayudarte</p>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+                    <h3>Afiliados de Exchanges</h3>
+                    <p>Seguimiento automático del volumen de trading de referidos, gestión fácil de comisiones y beneficios VIP</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-person-video3"></i>
+                    </div>
+                    <h3>KOLs de Crypto</h3>
+                    <p>Ofrece beneficios exclusivos a tus seguidores, rastrea el rendimiento de promociones y recompensas</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+                    <h3>Educadores de Trading</h3>
+                    <p>Clasifica estudiantes por rendimiento de trading, proporciona cursos y recursos correspondientes</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-broadcast"></i>
+                    </div>
+                    <h3>Grupos de Señales</h3>
+                    <p>Verifica la elegibilidad de suscriptores, asegura que solo usuarios calificados reciban señales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security" id="security">
+        <div class="container">
+            <div class="section-header">
+                <h2>Seguridad Primero</h2>
+                <p>La seguridad de tus datos es nuestra máxima prioridad</p>
+            </div>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <h3>Acceso Solo Lectura</h3>
+                    <p>La API solo requiere permisos de lectura. No puede realizar trades o retiros, asegurando que tus activos permanezcan seguros.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-hdd"></i>
+                    </div>
+                    <h3>Almacenamiento Local</h3>
+                    <p>Todos los datos se almacenan en tu dispositivo, nunca pasan por servidores de terceros. Control total de tus datos.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>Sin Acceso a Activos</h3>
+                    <p>El sistema solo verifica elegibilidad, nunca toca fondos. Los activos siempre permanecen seguros en el exchange.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>¿Listo para Comenzar?</h2>
+                <p>Contáctanos ahora para más información del producto y precios</p>
+                <a href="contact-es.html" class="btn btn-primary btn-lg">
+                    <i class="bi bi-chat-dots"></i> Contactar
+                </a>
+                <p class="contact-note">
+                    <i class="bi bi-clock"></i> Normalmente responde dentro de 24 horas
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">NEX</span>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2026 NEX. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop">
+        <i class="bi bi-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+
+    <!-- News Section Script -->
+    <script>
+        async function loadNews() {
+            const newsGrid = document.getElementById('newsGrid');
+            const lang = 'es';
+
+            try {
+                const response = await fetch('data/news.json');
+                const data = await response.json();
+
+                const articles = data.articles
+                    .filter(a => a.published)
+                    .sort((a, b) => new Date(b.date) - new Date(a.date))
+                    .slice(0, 3);
+
+                if (articles.length === 0) {
+                    newsGrid.innerHTML = '<p class="news-empty">No hay noticias disponibles</p>';
+                    return;
+                }
+
+                newsGrid.innerHTML = articles.map(article => `
+                    <div class="news-card">
+                        <div class="news-date">
+                            <i class="bi bi-calendar3"></i> ${article.date}
+                        </div>
+                        <h3 class="news-title">${article.title[lang] || article.title['en'] || ''}</h3>
+                        <p class="news-summary">${article.summary[lang] || article.summary['en'] || ''}</p>
+                    </div>
+                `).join('');
+
+            } catch (error) {
+                console.error('Error al cargar noticias:', error);
+                newsGrid.innerHTML = '<p class="news-empty">Error al cargar</p>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadNews);
+    </script>
+
+    <style>
+        .news-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #0a0a14 0%, #12121f 100%);
+        }
+        .news-section .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .news-section .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .news-section .section-header p {
+            color: #888;
+            font-size: 1.1rem;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .news-card {
+            background: linear-gradient(145deg, #1a1a2e 0%, #16162a 100%);
+            border: 1px solid #2a2a4a;
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            border-color: #6c5ce7;
+            box-shadow: 0 10px 40px rgba(108, 92, 231, 0.2);
+        }
+        .news-date {
+            color: #6c5ce7;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .news-date i {
+            margin-right: 5px;
+        }
+        .news-title {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .news-summary {
+            color: #aaa;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .news-loading, .news-empty {
+            text-align: center;
+            color: #888;
+            padding: 40px;
+            grid-column: 1 / -1;
+        }
+        .news-loading i {
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            .news-section {
+                padding: 60px 20px;
+            }
+            .news-section .section-header h2 {
+                font-size: 2rem;
+            }
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        function initTheme() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.remove('light-mode');
+                updateThemeIcons(false);
+            } else {
+                document.body.classList.add('light-mode');
+                updateThemeIcons(true);
+            }
+        }
+        function toggleTheme() {
+            const isLight = document.body.classList.toggle('light-mode');
+            localStorage.setItem('nex_theme', isLight ? 'light' : 'dark');
+            updateThemeIcons(isLight);
+        }
+        function updateThemeIcons(isLight) {
+            const icon = isLight ? 'bi-moon-fill' : 'bi-sun-fill';
+            const desktopIcon = document.getElementById('themeIcon');
+            const mobileIcon = document.getElementById('mobileThemeIcon');
+            if (desktopIcon) desktopIcon.className = 'bi ' + icon;
+            if (mobileIcon) mobileIcon.className = 'bi ' + icon;
+        }
+        document.addEventListener('DOMContentLoaded', initTheme);
+        (function() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme !== 'dark') document.body.classList.add('light-mode');
+        })();
+    </script>
+</body>
+</html>

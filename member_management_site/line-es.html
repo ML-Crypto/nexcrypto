@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEX - Sistema de Gestión de Miembros LINE OpenChat</title>
+    <meta name="description" content="Sistema profesional de gestión de miembros LINE OpenChat. Revisión automatizada de comunidad, verificación de miembros, vinculación de exchanges - una solución completa para tu comunidad LINE.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body id="top">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="home-es.html" class="logo">
+                <span class="logo-text">NEX</span>
+            </a>
+            <div class="nav-links">
+                <div class="products-dropdown">
+                    <button class="products-btn">Productos <i class="bi bi-chevron-down"></i></button>
+                    <div class="products-menu">
+                        <a href="discord-es.html" class="product-item">
+                            <i class="bi bi-discord"></i>
+                            <div>
+                                <strong>Gestión VIP Discord</strong>
+                                <span>Verificación automática, gestión de niveles, seguimiento de referidos</span>
+                            </div>
+                        </a>
+                        <a href="line-es.html" class="product-item active">
+                            <i class="bi bi-line"></i>
+                            <div>
+                                <strong>Gestión LINE OpenChat</strong>
+                                <span>Revisión de comunidad, verificación de miembros, gestión automática</span>
+                            </div>
+                        </a>
+                        <a href="custom-es.html" class="product-item">
+                            <i class="bi bi-puzzle"></i>
+                            <div>
+                                <strong>Totalmente Personalizado</strong>
+                                <span>Integración multiplataforma, a medida</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="#features">Funciones</a>
+                <a href="#screenshots">Vista Previa</a>
+                <a href="#pricing">Precios</a>
+                <a href="#faq">FAQ</a>
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar modo oscuro/claro">
+                    <i class="bi bi-sun-fill" id="themeIcon"></i>
+                </button>
+                <div class="lang-dropdown">
+                    <button class="lang-btn"><i class="bi bi-globe"></i> ES</button>
+                    <div class="lang-menu">
+                        <a href="line.html">繁體中文</a>
+                        <a href="line-zh-cn.html">简体中文</a>
+                        <a href="line-en.html">English</a>
+                        <a href="line-es.html" class="active">Español</a>
+                    </div>
+                </div>
+                <a href="contact-es.html">Contacto</a>
+            </div>
+            <div class="mobile-nav-group">
+                <!-- Mobile Theme Toggle -->
+                <button class="mobile-theme-toggle" onclick="toggleTheme()" title="Cambiar modo oscuro/claro">
+                    <i class="bi bi-sun-fill" id="mobileThemeIcon"></i>
+                </button>
+                <div class="mobile-lang-dropdown">
+                    <button class="mobile-lang-btn" onclick="toggleMobileLang()">
+                        <i class="bi bi-globe"></i>
+                    </button>
+                    <div class="mobile-lang-menu" id="mobileLangMenu">
+                        <a href="line.html">繁體中文</a>
+                        <a href="line-zh-cn.html">简体中文</a>
+                        <a href="line-en.html">English</a>
+                        <a href="line-es.html" class="active">Español</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-products-section">
+            <span class="mobile-section-title">Productos</span>
+            <a href="discord-es.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-discord"></i> Gestión VIP Discord
+            </a>
+            <a href="line-es.html" class="mobile-product-item active" onclick="toggleMobileMenu()">
+                <i class="bi bi-line"></i> Gestión LINE OpenChat
+            </a>
+            <a href="custom-es.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-puzzle"></i> Totalmente Personalizado
+            </a>
+        </div>
+        <a href="#features" onclick="toggleMobileMenu()">Funciones</a>
+        <a href="#screenshots" onclick="toggleMobileMenu()">Vista Previa</a>
+        <a href="#pricing" onclick="toggleMobileMenu()">Precios</a>
+        <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+        <a href="contact-es.html" onclick="toggleMobileMenu()">Contacto</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-split">
+                <div class="hero-left">
+                    <p class="hero-tag">Diseñado para Afiliados de Exchanges y Comunidades Crypto</p>
+                    <h1>Gestión de Comunidad LINE<br><span class="gradient-text">Revisión Automatizada</span></h1>
+                    <div class="hero-features">
+                        <p class="hero-feature-item">Verificación automática de elegibilidad de exchange</p>
+                        <p class="hero-feature-item">Revisión inteligente de solicitudes</p>
+                        <p class="hero-feature-item">Sincronización de estado en tiempo real</p>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            <i class="bi bi-telegram"></i> Contactar
+                        </a>
+                        <a href="#features" class="btn btn-outline btn-lg">
+                            Saber Más
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <img src="images/LINE/LINE總覽.jpg" alt="Vista General del Sistema" class="hero-screenshot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="platforms">
+        <div class="container">
+            <div class="platforms-row">
+                <p class="platforms-label">PLATAFORMA DE COMUNIDAD</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <i class="bi bi-line"></i>
+                        <span>LINE OpenChat</span>
+                    </div>
+                </div>
+            </div>
+            <div class="platforms-divider"></div>
+            <div class="platforms-row">
+                <p class="platforms-label">EXCHANGES COMPATIBLES</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <span class="platform-text-logo okx">OKX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bybit">BYB<span class="bybit-i">I</span>T</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bingx">BingX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo binance">Binance</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bitget">Bitget</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="audience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Diseñado Para Ti</h2>
+                <p>Sin importar qué tipo de comunidad LINE administres, NEX puede ayudarte</p>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+                    <h3>Afiliados de Exchanges</h3>
+                    <p>Revisión automática de solicitudes de referidos, gestión fácil de comisiones y beneficios</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-person-video3"></i>
+                    </div>
+                    <h3>KOLs de Crypto</h3>
+                    <p>Comunidades LINE exclusivas para seguidores, verificación automática de exchange</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+                    <h3>Educadores de Trading</h3>
+                    <p>Asegura que solo estudiantes calificados puedan unirse, gestión automática de elegibilidad</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-broadcast"></i>
+                    </div>
+                    <h3>Grupos de Señales</h3>
+                    <p>Verifica elegibilidad de suscriptores, asegura que solo usuarios que pagan puedan unirse</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section class="video-demo">
+        <div class="container">
+            <div class="section-header">
+                <h2>Demostración en Video</h2>
+                <p>Mira el flujo de trabajo real y conoce cómo funciona el sistema</p>
+            </div>
+            <div class="video-grid">
+                <div class="video-item">
+                    <h3>Demo Completa de Funciones</h3>
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/kB25g6vUvVY"
+                            title="Sistema LINE - Demo Completa de Funciones"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <h3>Demo de Aprobación Automática</h3>
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/zIRnm2BEMo0"
+                            title="Sistema LINE - Demo de Aprobación Automática"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Funciones Potentes, Todo en Uno</h2>
+                <p>Desde solicitudes de miembros hasta verificación, desde gestión de comunidad hasta seguimiento de datos - todo automatizado</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-line"></i>
+                    </div>
+                    <h3>Integración LINE OpenChat</h3>
+                    <p>Monitoreo automático de solicitudes, revisión de peticiones, sincronización de estado - gestión perfecta de tu comunidad LINE.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-person-check"></i>
+                    </div>
+                    <h3>Sistema de Revisión Auto</h3>
+                    <p>Aprueba o rechaza automáticamente según respuestas y estado de vinculación, ahorrando tiempo de gestión.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h3>Verificación API de Exchanges</h3>
+                    <p>Compatible con OKX, Bybit, BingX, Binance, Bitget y otros exchanges principales. Verifica automáticamente volumen, depósitos y nivel KYC.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-question-circle"></i>
+                    </div>
+                    <h3>Configuración de Preguntas</h3>
+                    <p>Personaliza preguntas de ingreso, requiere nombre de exchange, el sistema identifica y verifica automáticamente.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h3>Gestión de Fusión de Miembros</h3>
+                    <p>Cuando el mismo usuario se une a múltiples comunidades, fusiona automáticamente para una vista clara del estado.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-gear"></i>
+                    </div>
+                    <h3>Panel de Admin Web</h3>
+                    <p>Interfaz web intuitiva para ver datos en tiempo real, ajustar configuraciones y monitorear el sistema.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+                    <h3>Sincronización en Tiempo Real</h3>
+                    <p>Eventos de unirse, salir y expulsión se sincronizan al backend en tiempo real, manteniendo datos actualizados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cómo Funciona</h2>
+                <p>Proceso de revisión automatizado hace la gestión de comunidad sin esfuerzo</p>
+            </div>
+            <div class="steps-container">
+                <div class="steps-row">
+                    <div class="steps-label">
+                        <i class="bi bi-line"></i>
+                        <span>Proceso de Revisión LINE</span>
+                    </div>
+                    <div class="steps-grid-inline">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <div class="step-icon">
+                                <i class="bi bi-door-open"></i>
+                            </div>
+                            <h3>Solicitar Unirse</h3>
+                            <p>Usuario solicita unirse a comunidad LINE OpenChat</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <div class="step-icon">
+                                <i class="bi bi-chat-dots"></i>
+                            </div>
+                            <h3>Responder Pregunta</h3>
+                            <p>Usuario responde pregunta (nombre de exchange)</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <div class="step-icon">
+                                <i class="bi bi-cpu"></i>
+                            </div>
+                            <h3>Verificación Auto</h3>
+                            <p>Sistema verifica UID en apodo y elegibilidad de exchange</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card highlight-card">
+                            <div class="step-number">4</div>
+                            <div class="step-icon">
+                                <i class="bi bi-check-circle"></i>
+                            </div>
+                            <h3>Revisión Auto</h3>
+                            <p>Calificado: aprueba auto, No calificado: rechaza auto</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <div class="section-header">
+                <h2>Vista Previa del Sistema</h2>
+                <p>Interfaz de administración moderna para operación intuitiva y conveniente</p>
+            </div>
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <img src="images/LINE/LINE總覽.jpg" alt="Vista General del Panel">
+                    <p>Estadísticas en tiempo real, estado de miembros y métricas clave</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/LINE/LINE社群管理.jpg" alt="Gestión de Comunidad">
+                    <p>Gestiona múltiples comunidades LINE, configura reglas de revisión</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/LINE/LINE成員管理.jpg" alt="Gestión de Miembros">
+                    <p>Lista completa de miembros, estado de verificación y detalles</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/LINE/LINE訊息排程.jpg" alt="Programador de Mensajes">
+                    <p>Programa anuncios, automatiza la gestión de mensajes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security">
+        <div class="container">
+            <div class="section-header">
+                <h2>Seguridad Primero</h2>
+                <p>La seguridad de tus datos es nuestra máxima prioridad</p>
+            </div>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <h3>Acceso Solo Lectura</h3>
+                    <p>La API solo requiere permisos de lectura. No puede realizar trades o retiros, asegurando que tus activos permanezcan seguros.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-hdd"></i>
+                    </div>
+                    <h3>Almacenamiento Local</h3>
+                    <p>Todos los datos se almacenan en tu dispositivo, nunca pasan por servidores de terceros. Control total de tus datos.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>Sin Acceso a Activos</h3>
+                    <p>El sistema solo verifica elegibilidad, nunca toca fondos. Los activos siempre permanecen seguros en el exchange.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Precios</h2>
+                <p>Elige el plan que se adapte a tus necesidades y comienza hoy</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Recomendado</div>
+                    <div class="pricing-header">
+                        <h3>Profesional</h3>
+                        <p>Funciones completas, listo para usar</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-contact">Contáctanos</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Bot LINE OpenChat</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Exchanges: OKX, Bybit, BingX, Binance, Bitget</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Sistema de Revisión Auto</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Configuración de Preguntas</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Gestión de Miembros</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Panel de Admin Web</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Soporte Técnico</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-block">Contáctanos</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Personalizado</h3>
+                        <p>Adaptado a tus necesidades</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-contact">Contáctanos</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Todas las funciones Profesional</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Desarrollo personalizado</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Licencia multi-comunidad</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Acceso API</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Soporte dedicado</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-block">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Preguntas comunes sobre el sistema de gestión LINE OpenChat</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Qué exchanges soporta el sistema?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Actualmente soporta OKX, Bybit, BingX, Binance y Bitget, cinco exchanges principales. El sistema verifica automáticamente volumen de trading, monto de depósito y nivel KYC via API. Para otros exchanges, contáctanos para discutir soluciones personalizadas.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Cómo configuran los usuarios para pasar la verificación?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Los usuarios deben configurar su apodo de LINE con su UID de exchange (ej: 12345678 o 12345678Juan), y responder la pregunta de ingreso con el nombre del exchange (Bybit, OKX, BingX, Binance o Bitget). El sistema extrae automáticamente esta información para verificar.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Puedo gestionar múltiples comunidades LINE OpenChat?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí. El sistema soporta gestionar múltiples comunidades LINE OpenChat simultáneamente, cada una con configuraciones de revisión y preguntas independientes. El panel consolida datos de miembros de todas las comunidades.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Qué pasa con usuarios que no pasan la revisión?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Los usuarios que no pasan son rechazados automáticamente. El sistema registra la razón del rechazo (ej: volumen insuficiente, UID no encontrado, etc.). Los usuarios pueden volver a solicitar después de cumplir los requisitos.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Puedo modificar la configuración de comunidad desde el backend?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí. Puedes modificar el método de ingreso (público/requiere aprobación), preguntas de ingreso y otras configuraciones desde el backend. Los cambios se sincronizan a LINE en tiempo real.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>¿Cómo se despliega el sistema?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El sistema puede desplegarse en tu propia computadora o servidor. Proporcionamos guía de instalación completa y soporte técnico para asegurar una configuración sin problemas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>¿Listo para Comenzar?</h2>
+                <p>Contáctanos ahora para más información del producto y precios</p>
+                <a href="contact-es.html" class="btn btn-primary btn-lg">
+                    <i class="bi bi-chat-dots"></i> Contactar
+                </a>
+                <p class="contact-note">
+                    <i class="bi bi-clock"></i> Normalmente responde dentro de 24 horas
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">NEX</span>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2026 NEX. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="" id="lightbox-img">
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop">
+        <i class="bi bi-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <!-- Theme Toggle Script -->
+    <script>
+        function initTheme() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.remove('light-mode');
+                updateThemeIcons(false);
+            } else {
+                document.body.classList.add('light-mode');
+                updateThemeIcons(true);
+            }
+        }
+        function toggleTheme() {
+            const isLight = document.body.classList.toggle('light-mode');
+            localStorage.setItem('nex_theme', isLight ? 'light' : 'dark');
+            updateThemeIcons(isLight);
+        }
+        function updateThemeIcons(isLight) {
+            const icon = isLight ? 'bi-moon-fill' : 'bi-sun-fill';
+            const desktopIcon = document.getElementById('themeIcon');
+            const mobileIcon = document.getElementById('mobileThemeIcon');
+            if (desktopIcon) desktopIcon.className = 'bi ' + icon;
+            if (mobileIcon) mobileIcon.className = 'bi ' + icon;
+        }
+        document.addEventListener('DOMContentLoaded', initTheme);
+        (function() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme !== 'dark') document.body.classList.add('light-mode');
+        })();
+    </script>
+</body>
+</html>

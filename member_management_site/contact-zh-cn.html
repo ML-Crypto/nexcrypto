@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEX - 联系我们</title>
+    <meta name="description" content="联系 NEX 团队，了解更多关于社区会员管理系统的信息与价格方案。">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body id="top" class="contact-page">
+    <!-- Storm Background -->
+    <div class="contact-page-bg">
+        <div class="storm-layer storm-layer-1"></div>
+        <div class="storm-layer storm-layer-2"></div>
+        <div class="storm-layer storm-layer-3"></div>
+        <div class="storm-wave"></div>
+        <div class="storm-wave"></div>
+        <div class="storm-wave"></div>
+        <div class="storm-wave"></div>
+        <div class="storm-particles">
+            <div class="storm-particle"></div>
+            <div class="storm-particle"></div>
+            <div class="storm-particle"></div>
+            <div class="storm-particle"></div>
+            <div class="storm-particle"></div>
+            <div class="storm-particle"></div>
+            <div class="storm-particle"></div>
+            <div class="storm-particle"></div>
+            <div class="storm-particle"></div>
+            <div class="storm-particle"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="home-zh-cn.html" class="logo">
+                <span class="logo-text">NEX</span>
+            </a>
+            <div class="nav-links">
+                <div class="products-dropdown">
+                    <button class="products-btn">产品 <i class="bi bi-chevron-down"></i></button>
+                    <div class="products-menu">
+                        <a href="discord-zh-cn.html" class="product-item">
+                            <i class="bi bi-discord"></i>
+                            <div>
+                                <strong>Discord 管理系统</strong>
+                                <span>自动验证、等级管理、邀请追踪</span>
+                            </div>
+                        </a>
+                        <a href="telegram-zh-cn.html" class="product-item">
+                            <i class="bi bi-telegram"></i>
+                            <div>
+                                <strong>Telegram 管理系统</strong>
+                                <span>群组验证、权限控制、自动管理</span>
+                            </div>
+                        </a>
+                        <a href="line-zh-cn.html" class="product-item">
+                            <i class="bi bi-line"></i>
+                            <div>
+                                <strong>LINE 管理系统</strong>
+                                <span>社区审核、成员验证、自动管理</span>
+                            </div>
+                        </a>
+                        <a href="custom-zh-cn.html" class="product-item">
+                            <i class="bi bi-puzzle"></i>
+                            <div>
+                                <strong>全定制化方案</strong>
+                                <span>跨平台整合、量身打造</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="contact-zh-cn.html" class="active">联系我们</a>
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" onclick="toggleTheme()" title="切换深色/浅色模式">
+                    <i class="bi bi-sun-fill" id="themeIcon"></i>
+                </button>
+                <div class="lang-dropdown">
+                    <button class="lang-btn"><i class="bi bi-globe"></i> 简体</button>
+                    <div class="lang-menu">
+                        <a href="contact.html">繁體中文</a>
+                        <a href="contact-zh-cn.html" class="active">简体中文</a>
+                        <a href="contact-en.html">English</a>
+                        <a href="contact-es.html">Español</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-nav-group">
+                <!-- Mobile Theme Toggle -->
+                <button class="mobile-theme-toggle" onclick="toggleTheme()" title="切换深色/浅色模式">
+                    <i class="bi bi-sun-fill" id="mobileThemeIcon"></i>
+                </button>
+                <div class="mobile-lang-dropdown">
+                    <button class="mobile-lang-btn" onclick="toggleMobileLang()">
+                        <i class="bi bi-globe"></i>
+                    </button>
+                    <div class="mobile-lang-menu" id="mobileLangMenu">
+                        <a href="contact.html">繁體中文</a>
+                        <a href="contact-zh-cn.html" class="active">简体中文</a>
+                        <a href="contact-en.html">English</a>
+                        <a href="contact-es.html">Español</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-products-section">
+            <span class="mobile-section-title">产品</span>
+            <a href="discord-zh-cn.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-discord"></i> Discord 管理系统
+            </a>
+            <a href="telegram-zh-cn.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-telegram"></i> Telegram 管理系统
+            </a>
+            <a href="line-zh-cn.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-line"></i> LINE 管理系统
+            </a>
+            <a href="custom-zh-cn.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-puzzle"></i> 全定制化方案
+            </a>
+        </div>
+        <a href="contact-zh-cn.html" class="active" onclick="toggleMobileMenu()">联系我们</a>
+    </div>
+
+    <!-- Contact Hero Section -->
+    <section class="hero hero-contact">
+        <div class="hero-bg"></div>
+        <!-- Tech Decoration Circles -->
+        <div class="contact-hero-decoration">
+            <div class="tech-circle"></div>
+            <div class="tech-circle"></div>
+            <div class="tech-circle"></div>
+        </div>
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1>联系我们</h1>
+                <p>选择适合您的客服人员，通过 Telegram 即时联系</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Cards Section -->
+    <section class="contact-cards-section">
+        <div class="container">
+            <div class="contact-cards-grid">
+                <!-- Allan -->
+                <div class="contact-card">
+                    <div class="contact-avatar">
+                        <div class="contact-avatar-ring allan">
+                            <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=SalesAllan&backgroundColor=f59e0b&clothing=blazerAndShirt&top=shortFlat" alt="Allan">
+                        </div>
+                    </div>
+                    <h3>Allan</h3>
+                    <p class="contact-role">Sales Director</p>
+                    <div class="contact-languages">
+                        <span class="lang-tag">中文</span>
+                    </div>
+                    <ul class="contact-expertise">
+                        <li>产品咨询与演示</li>
+                        <li>方案规划与报价</li>
+                        <li>合作洽谈</li>
+                    </ul>
+                    <p class="contact-response-time">
+                        <i class="bi bi-clock"></i> 通常在 24 小时内回复
+                    </p>
+                    <a href="https://t.me/ALLAN_CHEN_YU" target="_blank" class="btn btn-primary btn-block">
+                        <i class="bi bi-telegram"></i> 通过 Telegram 联系
+                    </a>
+                </div>
+                <!-- Matt -->
+                <div class="contact-card">
+                    <div class="contact-avatar">
+                        <div class="contact-avatar-ring matt">
+                            <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=DevMatt2&backgroundColor=3b82f6&clothing=blazerAndShirt&top=shortWaved&eyes=default" alt="Matt">
+                        </div>
+                    </div>
+                    <h3>Matt</h3>
+                    <p class="contact-role">Lead Developer</p>
+                    <div class="contact-languages">
+                        <span class="lang-tag">中文</span>
+                        <span class="lang-tag">English</span>
+                    </div>
+                    <ul class="contact-expertise">
+                        <li>技术支持与问题排解</li>
+                        <li>定制化功能开发</li>
+                        <li>系统整合咨询</li>
+                    </ul>
+                    <p class="contact-response-time">
+                        <i class="bi bi-clock"></i> 通常在 12 小时内回复
+                    </p>
+                    <a href="https://t.me/nexscrypto" target="_blank" class="btn btn-primary btn-block">
+                        <i class="bi bi-telegram"></i> 通过 Telegram 联系
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">NEX</span>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2026 NEX. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop">
+        <i class="bi bi-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <!-- Theme Toggle Script -->
+    <script>
+        function initTheme() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.remove('light-mode');
+                updateThemeIcons(false);
+            } else {
+                document.body.classList.add('light-mode');
+                updateThemeIcons(true);
+            }
+        }
+        function toggleTheme() {
+            const isLight = document.body.classList.toggle('light-mode');
+            localStorage.setItem('nex_theme', isLight ? 'light' : 'dark');
+            updateThemeIcons(isLight);
+        }
+        function updateThemeIcons(isLight) {
+            const icon = isLight ? 'bi-moon-fill' : 'bi-sun-fill';
+            const desktopIcon = document.getElementById('themeIcon');
+            const mobileIcon = document.getElementById('mobileThemeIcon');
+            if (desktopIcon) desktopIcon.className = 'bi ' + icon;
+            if (mobileIcon) mobileIcon.className = 'bi ' + icon;
+        }
+        document.addEventListener('DOMContentLoaded', initTheme);
+        (function() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme !== 'dark') document.body.classList.add('light-mode');
+        })();
+    </script>
+</body>
+</html>

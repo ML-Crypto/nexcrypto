@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEX - LINE OpenChat 会员管理系统</title>
+    <meta name="description" content="专业的 LINE OpenChat 会员管理系统，自动化社区审核、成员验证、交易所绑定，为您的 LINE 社区提供完整的会员解决方案。">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body id="top">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="home-zh-cn.html" class="logo">
+                <span class="logo-text">NEX</span>
+            </a>
+            <div class="nav-links">
+                <div class="products-dropdown">
+                    <button class="products-btn">产品 <i class="bi bi-chevron-down"></i></button>
+                    <div class="products-menu">
+                        <a href="discord-zh-cn.html" class="product-item">
+                            <i class="bi bi-discord"></i>
+                            <div>
+                                <strong>Discord 管理系统</strong>
+                                <span>自动验证、等级管理、邀请追踪</span>
+                            </div>
+                        </a>
+                        <a href="telegram-zh-cn.html" class="product-item">
+                            <i class="bi bi-telegram"></i>
+                            <div>
+                                <strong>Telegram 管理系统</strong>
+                                <span>群组验证、权限控制、自动管理</span>
+                            </div>
+                        </a>
+                        <a href="line-zh-cn.html" class="product-item active">
+                            <i class="bi bi-line"></i>
+                            <div>
+                                <strong>LINE 管理系统</strong>
+                                <span>社区审核、成员验证、自动管理</span>
+                            </div>
+                        </a>
+                        <a href="custom-zh-cn.html" class="product-item">
+                            <i class="bi bi-puzzle"></i>
+                            <div>
+                                <strong>全定制化方案</strong>
+                                <span>跨平台整合、量身打造</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="#features">功能特色</a>
+                <a href="#screenshots">系统预览</a>
+                <a href="#pricing">方案价格</a>
+                <a href="#faq">常见问题</a>
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" onclick="toggleTheme()" title="切换深色/浅色模式">
+                    <i class="bi bi-sun-fill" id="themeIcon"></i>
+                </button>
+                <div class="lang-dropdown">
+                    <button class="lang-btn"><i class="bi bi-globe"></i> 简体</button>
+                    <div class="lang-menu">
+                        <a href="line.html">繁體中文</a>
+                        <a href="line-zh-cn.html" class="active">简体中文</a>
+                        <a href="line-en.html">English</a>
+                        <a href="line-es.html">Español</a>
+                    </div>
+                </div>
+                <a href="contact-zh-cn.html">联系我们</a>
+            </div>
+            <div class="mobile-nav-group">
+                <!-- Mobile Theme Toggle -->
+                <button class="mobile-theme-toggle" onclick="toggleTheme()" title="切换深色/浅色模式">
+                    <i class="bi bi-sun-fill" id="mobileThemeIcon"></i>
+                </button>
+                <div class="mobile-lang-dropdown">
+                    <button class="mobile-lang-btn" onclick="toggleMobileLang()">
+                        <i class="bi bi-globe"></i>
+                    </button>
+                    <div class="mobile-lang-menu" id="mobileLangMenu">
+                        <a href="line.html">繁體中文</a>
+                        <a href="line-zh-cn.html" class="active">简体中文</a>
+                        <a href="line-en.html">English</a>
+                        <a href="line-es.html">Español</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-products-section">
+            <span class="mobile-section-title">产品</span>
+            <a href="discord-zh-cn.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-discord"></i> Discord 管理系统
+            </a>
+            <a href="telegram-zh-cn.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-telegram"></i> Telegram 管理系统
+            </a>
+            <a href="line-zh-cn.html" class="mobile-product-item active" onclick="toggleMobileMenu()">
+                <i class="bi bi-line"></i> LINE 管理系统
+            </a>
+            <a href="custom-zh-cn.html" class="mobile-product-item" onclick="toggleMobileMenu()">
+                <i class="bi bi-puzzle"></i> 全定制化方案
+            </a>
+        </div>
+        <a href="#features" onclick="toggleMobileMenu()">功能特色</a>
+        <a href="#screenshots" onclick="toggleMobileMenu()">系统预览</a>
+        <a href="#pricing" onclick="toggleMobileMenu()">方案价格</a>
+        <a href="#faq" onclick="toggleMobileMenu()">常见问题</a>
+        <a href="contact-zh-cn.html" onclick="toggleMobileMenu()">联系我们</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-split">
+                <div class="hero-left">
+                    <p class="hero-tag">专为交易所代理商与加密货币社区打造</p>
+                    <h1>LINE 社区管理<br><span class="gradient-text">自动化审核</span></h1>
+                    <div class="hero-features">
+                        <p class="hero-feature-item">自动验证交易所绑定资格</p>
+                        <p class="hero-feature-item">智能审核加入申请</p>
+                        <p class="hero-feature-item">即时同步成员状态</p>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            <i class="bi bi-telegram"></i> 联系咨询
+                        </a>
+                        <a href="#features" class="btn btn-outline btn-lg">
+                            了解更多
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <img src="images/LINE/LINE總覽.jpg" alt="系统总览" class="hero-screenshot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="platforms">
+        <div class="container">
+            <div class="platforms-row">
+                <p class="platforms-label">社区平台</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <i class="bi bi-line"></i>
+                        <span>LINE OpenChat</span>
+                    </div>
+                </div>
+            </div>
+            <div class="platforms-divider"></div>
+            <div class="platforms-row">
+                <p class="platforms-label">支持交易所</p>
+                <div class="platforms-grid">
+                    <div class="platform-item">
+                        <span class="platform-text-logo okx">OKX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bybit">BYB<span class="bybit-i">I</span>T</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bingx">BingX</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo binance">Binance</span>
+                    </div>
+                    <div class="platform-item">
+                        <span class="platform-text-logo bitget">Bitget</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="audience">
+        <div class="container">
+            <div class="section-header">
+                <h2>专为这些人打造</h2>
+                <p>无论您经营什么类型的 LINE 社区，NEX 都能帮助您</p>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+                    <h3>交易所代理商</h3>
+                    <p>自动审核下线加入申请，轻松管理推荐资格与会员权益</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-person-video3"></i>
+                    </div>
+                    <h3>加密货币 KOL</h3>
+                    <p>为粉丝提供专属 LINE 社区，自动验证交易所绑定</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+                    <h3>投资教学社区</h3>
+                    <p>确保只有合格学员能加入，自动管理会员资格</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="bi bi-broadcast"></i>
+                    </div>
+                    <h3>交易信号群组</h3>
+                    <p>验证订阅者资格，确保只有付费用户能加入群组</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section class="video-demo">
+        <div class="container">
+            <div class="section-header">
+                <h2>产品视频演示</h2>
+                <p>观看实际操作流程，了解系统如何运作</p>
+            </div>
+            <div class="video-grid">
+                <div class="video-item">
+                    <h3>完整功能演示</h3>
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/kB25g6vUvVY"
+                            title="LINE 会员管理系统 - 完整功能演示"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <h3>自动审核加入演示</h3>
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/zIRnm2BEMo0"
+                            title="LINE 会员管理系统 - 自动审核加入演示"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>强大功能，一应俱全</h2>
+                <p>从成员申请到资格验证，从社区管理到数据追踪，全部自动化处理</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-line"></i>
+                    </div>
+                    <h3>LINE OpenChat 整合</h3>
+                    <p>自动监控社区申请、审核加入请求、同步成员状态，无缝管理您的 LINE 社区。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-person-check"></i>
+                    </div>
+                    <h3>自动审核机制</h3>
+                    <p>根据用户回答与交易所绑定状态，自动批准或拒绝加入申请，节省管理时间。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h3>交易所 API 验证</h3>
+                    <p>支持 OKX、Bybit、BingX、Binance、Bitget 等主流交易所，自动验证用户交易量、入金额、KYC 等级。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-question-circle"></i>
+                    </div>
+                    <h3>加入问题设置</h3>
+                    <p>自定义加入问题，要求用户填写交易所名称，系统自动识别并进行验证。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h3>成员合并管理</h3>
+                    <p>同一用户加入多个社区时自动合并显示，一目了然掌握会员状态。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-gear"></i>
+                    </div>
+                    <h3>Web 管理后台</h3>
+                    <p>直观化网页界面，实时查看成员数据、调整社区设置、监控运作状态。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+                    <h3>即时事件同步</h3>
+                    <p>成员加入、离开、被踢出等事件即时同步到后台，保持资料最新状态。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>如何运作</h2>
+                <p>自动化审核流程，让社区管理轻松无负担</p>
+            </div>
+            <div class="steps-container">
+                <div class="steps-row">
+                    <div class="steps-label">
+                        <i class="bi bi-line"></i>
+                        <span>LINE 审核流程</span>
+                    </div>
+                    <div class="steps-grid-inline">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <div class="step-icon">
+                                <i class="bi bi-door-open"></i>
+                            </div>
+                            <h3>申请加入</h3>
+                            <p>用户申请加入 LINE OpenChat 社区</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <div class="step-icon">
+                                <i class="bi bi-chat-dots"></i>
+                            </div>
+                            <h3>回答问题</h3>
+                            <p>用户回答加入问题（交易所名称）</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <div class="step-icon">
+                                <i class="bi bi-cpu"></i>
+                            </div>
+                            <h3>自动验证</h3>
+                            <p>系统验证昵称中的 UID 与交易所资格</p>
+                        </div>
+                        <div class="step-connector">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="step-card highlight-card">
+                            <div class="step-number">4</div>
+                            <div class="step-icon">
+                                <i class="bi bi-check-circle"></i>
+                            </div>
+                            <h3>自动审核</h3>
+                            <p>合格自动批准，不合格自动拒绝</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <div class="section-header">
+                <h2>系统预览</h2>
+                <p>现代化的管理界面，让操作更加直观便捷</p>
+            </div>
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <img src="images/LINE/LINE總覽.jpg" alt="仪表板总览">
+                    <p>实时查看社区统计、成员状态与重要指标</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/LINE/LINE社群管理.jpg" alt="社区管理">
+                    <p>管理多个 LINE 社区、设置审核规则</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/LINE/LINE成員管理.jpg" alt="成员管理">
+                    <p>完整的成员列表、验证状态与详细资料</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/LINE/LINE訊息排程.jpg" alt="消息排程">
+                    <p>定时发送公告、自动化消息管理</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security">
+        <div class="container">
+            <div class="section-header">
+                <h2>安全至上</h2>
+                <p>您的数据安全是我们的首要考量</p>
+            </div>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <h3>仅需读取权限</h3>
+                    <p>交易所 API 只需要读取权限，无法进行任何交易或提款操作，确保您的资产安全无虞。</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-hdd"></i>
+                    </div>
+                    <h3>数据本地存储</h3>
+                    <p>所有数据存储在您自己的设备上，不经过第三方服务器，完全掌控您的资料。</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>不接触用户资产</h3>
+                    <p>系统仅验证用户资格，不涉及任何资金操作，用户资产始终在交易所安全保管。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>方案价格</h2>
+                <p>选择适合您的方案，立即开始使用</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">推荐</div>
+                    <div class="pricing-header">
+                        <h3>专业版</h3>
+                        <p>完整功能，立即上手</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-contact">联系咨询</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle-fill"></i> LINE OpenChat 机器人</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 支持交易所：OKX、Bybit、BingX、Binance、Bitget</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 自动审核机制</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 加入问题设置</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 成员管理系统</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Web 管理后台</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 技术支持</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-block">联系咨询</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>定制化版本</h3>
+                        <p>依需求量身打造</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-contact">联系咨询</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle-fill"></i> 所有专业版功能</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 定制化功能开发</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 多社区授权</li>
+                        <li><i class="bi bi-check-circle-fill"></i> API 存取</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 专属技术支持</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-block">联系咨询</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>常见问题</h2>
+                <p>关于 LINE OpenChat 管理系统的常见疑问</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>这个系统支持哪些交易所？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>目前支持 OKX、Bybit、BingX、Binance 和 Bitget 五大主流交易所。系统会自动通过交易所 API 验证用户的交易量、入金额度和 KYC 等级。如有其他交易所需求，欢迎联系我们讨论定制化方案。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>用户需要如何设置才能通过验证？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>用户需要将 LINE 昵称设置为交易所 UID（例如：12345678 或 12345678小明），并在加入问题中回答所使用的交易所名称（OKX、Bybit、BingX、Binance 或 Bitget）。系统会自动提取这些信息进行验证。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>可以管理多个 LINE OpenChat 社区吗？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>可以。系统支持同时管理多个 LINE OpenChat 社区，每个社区可以有独立的审核设置和加入问题。管理后台会整合显示所有社区的成员资料。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>审核不通过的用户会怎样？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>审核不通过的用户会被自动拒绝加入申请，系统会记录拒绝原因（如：交易量不足、未找到 UID 等）。用户可以在满足条件后重新申请加入。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>可以在后台修改社区设置吗？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>可以。您可以在后台修改社区的加入方式（公开/需审核）、加入问题等设置，修改会即时同步到 LINE。</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>系统如何部署？</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>系统可以部署在您自己的电脑或服务器上运行。我们提供完整的安装指导和技术支持，确保您能顺利启用系统。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>准备好开始了吗？</h2>
+                <p>立即联系我们，了解更多产品信息与价格方案</p>
+                <a href="contact-zh-cn.html" class="btn btn-primary btn-lg">
+                    <i class="bi bi-chat-dots"></i> 联系我们
+                </a>
+                <p class="contact-note">
+                    <i class="bi bi-clock"></i> 通常在 24 小时内回复
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">NEX</span>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2026 NEX. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="" id="lightbox-img">
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop">
+        <i class="bi bi-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <!-- Theme Toggle Script -->
+    <script>
+        function initTheme() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.remove('light-mode');
+                updateThemeIcons(false);
+            } else {
+                document.body.classList.add('light-mode');
+                updateThemeIcons(true);
+            }
+        }
+        function toggleTheme() {
+            const isLight = document.body.classList.toggle('light-mode');
+            localStorage.setItem('nex_theme', isLight ? 'light' : 'dark');
+            updateThemeIcons(isLight);
+        }
+        function updateThemeIcons(isLight) {
+            const icon = isLight ? 'bi-moon-fill' : 'bi-sun-fill';
+            const desktopIcon = document.getElementById('themeIcon');
+            const mobileIcon = document.getElementById('mobileThemeIcon');
+            if (desktopIcon) desktopIcon.className = 'bi ' + icon;
+            if (mobileIcon) mobileIcon.className = 'bi ' + icon;
+        }
+        document.addEventListener('DOMContentLoaded', initTheme);
+        (function() {
+            const savedTheme = localStorage.getItem('nex_theme');
+            if (savedTheme !== 'dark') document.body.classList.add('light-mode');
+        })();
+    </script>
+</body>
+</html>
